@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <locale.h>
-#include <teste.h>
 
 char tabuleiro[3][3]; // Tabuleiro 3x3
 
