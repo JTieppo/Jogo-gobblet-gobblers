@@ -68,6 +68,8 @@ int fazerJogada(int linha, int coluna, char jogador) {
 }
 
 int main() {
+    char jogadorUm[50], jogadorDois[50];
+
     printf("Digite o nome do primeiro jogador, ou iniciais: ");
     scanf(" %s", &jogadorUm);
     printf("Digite o nome do segundo jogador, ou iniciais: ");
