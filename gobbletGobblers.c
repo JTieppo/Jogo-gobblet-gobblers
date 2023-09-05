@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <locale.h>
+#include <teste.h>
 
 char tabuleiro[3][3]; // Tabuleiro 3x3
 
@@ -105,7 +106,7 @@ int main() {
     char jogadorUm[50], jogadorDois[50], vencedorNome[50];
 
     setlocale(LC_ALL, "Portuguese");
-
+    
     imprimeInicio();
     while (opcao > 3 || opcao < 1)
     {
