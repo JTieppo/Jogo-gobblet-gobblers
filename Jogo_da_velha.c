@@ -11,18 +11,18 @@ void inicializarTabuleiro() {
 }
 
 void imprimirTabuleiro() {
-    printf("  1 2 3\n");
+    printf("    1     2     3\n\n");
     for (int i = 0; i < 3; i++) {
         printf("%d ", i + 1);
         for (int j = 0; j < 3; j++) {
             printf("%c", tabuleiro[i][j]);
             if (j < 2) {
-                printf("|");
+                printf("   |   ");
             }
         }
         printf("\n");
         if (i < 2) {
-            printf("  -+-+-\n");
+            printf("     -+ ----  +-\n");
         }
     }
 }
@@ -68,14 +68,14 @@ int fazerJogada(int linha, int coluna, char jogador) {
 }
 
 int main() {
-    char jogadorUm[50], jogadorDois[50];
+    char jogadorUm[50], jogadorDois[50], vencedorNome[50];
 
     printf("Digite o nome do primeiro jogador, ou iniciais: ");
     scanf(" %s", &jogadorUm);
     printf("Digite o nome do segundo jogador, ou iniciais: ");
     scanf(" %s", &jogadorDois);
-    printf("Jogador %s, seu caractere é (* x X)", jogadorUm);
-    printf("Jogador %s, seu caractere é (. o O)", jogadorDois);
+    printf("\nJogador %s, seu caractere é (* x X)\n", jogadorUm);
+    printf("Jogador %s, seu caractere é (. o O)\n\n", jogadorDois);
 
     int vez = 0; // 0 para jogador 1 e 1 para jogador 2
     int linha, coluna;
@@ -87,7 +87,7 @@ int main() {
     while (!jogoTerminado) {
         imprimirTabuleiro();
 
-        printf("Jogador %c, digite a linha e a coluna (ex: 1 2): ", jogadorAtual);
+        printf("\nJogador %c, digite a linha e a coluna (ex: 1 2): ", jogadorAtual);
         scanf("%d %d", &linha, &coluna);
 
         if (fazerJogada(linha, coluna, jogadorAtual)) {
@@ -102,9 +102,14 @@ int main() {
             } else {
                 vez = 1 - vez;
                 jogadorAtual = (vez == 0) ? 'X' : 'O';
+                //if (jogadorAtual == 'X') {
+                //    vencedorNome = jogadorUm;
+                //} else {
+                //    vencedorNome = jogadorDois;
+                //}
             }
         } else {
-            printf("Jogada inválida. Tente novamente.\n");
+            printf("\nJogada inválida. Tente novamente.\n");
         }
     }
 
