@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <locale.h>
-#include "func.h"
+#include "inicio.h"
 
 char tabuleiro[3][3]; // Tabuleiro 3x3
 
@@ -143,5 +143,6 @@ int main() {
         
         
     }
+    
     return 0;
 }
