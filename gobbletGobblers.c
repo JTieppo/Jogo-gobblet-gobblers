@@ -86,9 +86,13 @@ int main() {
         }
     }
     
-      
-    if (opcao == 1) {
-
+    switch (opcao)
+    {
+    case 1:
+        printf("\nEscrever aqui as insstruções\n\n");
+        break;
+    
+    case 2:
         printf("Digite o nome do primeiro jogador, ou iniciais: ");
         scanf(" %s", &jogadorUm);
         printf("Digite o nome do segundo jogador, ou iniciais: ");
@@ -131,17 +135,19 @@ int main() {
                 printf("\nJogada inválida. Tente novamente.\n");
             }
         }
-    } else {
-        if (opcao == 2) {
-            return 0;
-        } else if (opcao == 3) {
-            printf("\n                                   Jogo desenvolvido por alunos:                          \n\n");
-            printf("          Emerson Alexandre Tieppo Junior      Misael correia      Lucas Catuyama           \n\n");
-        } else {
-            printf("                           Opção inválida.                                                 \n\n");
-        }
-        
-        
+        break;
+
+    case 3:
+        return 0;
+        break;
+
+    case 4:
+        printf("\n                                   Jogo desenvolvido por alunos:                          \n\n");
+        printf("          Emerson Alexandre Tieppo Junior      Misael correia      Lucas Catuyama           \n\n");
+        break;
+
+    default:
+        break;
     }
     
     return 0;
