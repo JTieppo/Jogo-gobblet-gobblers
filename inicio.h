@@ -30,7 +30,7 @@ void imprimeInicio() {
 
     printf("                                                                                   1 - Instruções                                                                 \n");
     printf("                                                                                   2 - Jogar                                                                 \n");
-    printf("                                                                                   2 - sair                                                                  \n");
-    printf("                                                                                   3 - créditos                                                            \n\n");
+    printf("                                                                                   3 - sair                                                                  \n");
+    printf("                                                                                   4 - créditos                                                            \n\n");
     printf("                                                                 DIGITE O NÚMERO DA OPÇÃO DESEJADA E PRESSIONE ENTER                                       \n\n");
 }
