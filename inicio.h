@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <locale.h>
 
 void imprimeInicio() {
+    setlocale(LC_ALL, "Portuguese");
+
     printf("\n             uuuuuuuuuuu     uuuuuuuuuuu     uuuuuuuuuuu u       uuuuuuuuuuu u        uu                uuuuuuuuuuuu      uuuuuuuuuuuuuu                   \n");
     printf("\n             uu              u        uu     u           u       u           u        uu                uu       uu             uu                         \n");
     printf("\n             u               u        uu     u          u        u          u         uu                uu                      uu                         \n");
@@ -25,7 +28,8 @@ void imprimeInicio() {
     
     printf("       ------------------------------------------------------------------------------------------------------------------------------------------------\n\n\n\n");
 
-    printf("                                                                                   1 - Jogar                                                                 \n");
+    printf("                                                                                   1 - Instruções                                                                 \n");
+    printf("                                                                                   2 - Jogar                                                                 \n");
     printf("                                                                                   2 - sair                                                                  \n");
     printf("                                                                                   3 - créditos                                                            \n\n");
     printf("                                                                 DIGITE O NÚMERO DA OPÇÃO DESEJADA E PRESSIONE ENTER                                       \n\n");
