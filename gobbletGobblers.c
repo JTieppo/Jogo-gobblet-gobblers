@@ -125,11 +125,6 @@ int main() {
                 } else {
                     vez = 1 - vez;
                     jogadorAtual = (vez == 0) ? 'X' : 'O';
-                    //if (jogadorAtual == 'X') {
-                    //    vencedorNome = jogadorUm;
-                    //} else {
-                    //    vencedorNome = jogadorDois;
-                    //}
                 }
             } else {
                 printf("\nJogada inválida. Tente novamente.\n");
@@ -142,8 +137,7 @@ int main() {
         break;
 
     case 4:
-        printf("\n                                   Jogo desenvolvido por alunos:                          \n\n");
-        printf("          Emerson Alexandre Tieppo Junior      Misael correia      Lucas Catuyama           \n\n");
+        creditos();
         break;
 
     default:

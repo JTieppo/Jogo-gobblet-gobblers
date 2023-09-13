@@ -34,3 +34,10 @@ void imprimeInicio() {
     printf("                                                                                   4 - créditos                                                            \n\n");
     printf("                                                                 DIGITE O NÚMERO DA OPÇÃO DESEJADA E PRESSIONE ENTER                                       \n\n");
 }
+
+void creditos() {
+    setlocale(LC_ALL, "Portuguese");
+
+        printf("\n                                                                       Jogo desenvolvido por alunos:                           \n\n");
+        printf("                                               Emerson Alexandre Tieppo Junior      Misael correia      Lucas Catuyama           \n\n");
+} 
