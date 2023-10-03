@@ -58,7 +58,7 @@ int main() {
 
     
     // Importa e carrega o arquivo da fonte  
-    ALLEGRO_FONT *fonte = al_load_font("inter.ttf", 65, 0);
+    ALLEGRO_FONT *fonte = al_load_font("./assets/inter.ttf", 65, 0);
     
 
 
