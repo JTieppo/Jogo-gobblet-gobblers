@@ -1,0 +1,16 @@
+O mingw é o compilador gcc e gpp para o windows, o mesmo utilizado no dev c++, ele é necessário para gerar o executável do
+jogo e passar a biblioteca allegro5 como referencia para o arquivo main.c por exemplo, caso não queira instalar terá que utilizar
+o visual studio para executar 
+
+1 opção - mingw (recomendo essa):
+	Copie a pasta mingw64 e coloque na pasta c:/
+	na caixa de busca do windows procure por variaveis de ambiente, abra, clique em variaveis de ambiente na lista de baixo
+	selecione Path, editar, novo e cole C:\mingw64\bin, clique em ok e saia, o mingw está configurado
+
+
+2 opção - visual studio
+	caso utilize o visual studio(o roxo) no arquivo do projeto clique com o botão esquerdo do mouse vá em gerenciar pacotes nuget
+	procurar, digite allegro5 e instale a primeira opção(allegro), saia e clique novamente, vá em propriedades  allegro5, em add-ons
+	vá ao final da fila e aperte na seta que aparecerá, selecione todos sim e clique em aplicar, ainda em allegro 5 vá e library type
+	selecione a seta que ira aparecer e selecione a opção Dynamic Debug - Dynamic runtime, aplicar e pronto, a biblioteca já esta
+	configurada para rodar, mas recomendo fortemente utilizar o mingw com o terminal.bat
