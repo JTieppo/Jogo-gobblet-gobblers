@@ -1,8 +1,11 @@
-#include <allegro5/allegro.h>
 #include <stdio.h>
+#include <locale.h>
+#include <stdbool.h>
+
+#include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_ttf.h>
-#include <locale.h>
+
 
 int main() {
     setlocale(LC_ALL, "Portuguese");
