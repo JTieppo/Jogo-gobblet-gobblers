@@ -54,7 +54,7 @@ int main()
     // coloquei uma variavel diferente pros numeros pra se caso queira mudar a cor
 
     // Importa e carrega o arquivo da fonte
-    ALLEGRO_FONT *fonte = al_load_font("./assets/inter.ttf", 65, 0);
+    ALLEGRO_FONT *fonte = al_load_font("./assets/Pixelify.ttf", 65, 0);
 
     // Define caracteristicas
     int espessura_sharp = 5;
@@ -68,12 +68,105 @@ int main()
 
     void entrada() 
     {
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "ola como");
+        
+        // COLOCA AS LETRAS PARA APARECEREM MAIS RÁPIDO
+        // ARRUMA O LUGAR DAS LETRAS ESPAÇANDO E ATUALIZANDO 
+        // COLOCA AS LETRAS NO CENTRO 
+        // COLOCA AS OPÇÕES DE INSTRUÇÕES JOGAR CREDITOS
+        // ADICIONA OS UNDERSCORE E OS ESPACE JUNTO COM AS LETRAS 
+
+
+        //al_rest();
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "_______");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "________");
         al_flip_display();
+
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "G______");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "_______S");
+        al_flip_display();
+        
+        al_rest(0.3);
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "GO_____");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "______RS");
+        al_flip_display();
+
+        al_rest(0.3);
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOB____");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "_____ERS");
+        al_flip_display();
+
+        al_rest(0.3);
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBB___");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "____LERS");
+        al_flip_display();
+
+        al_rest(0.3);
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBL__");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "___BLERS");
+        al_flip_display();
+
+        al_rest(0.3);
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLE_");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "__BBLERS");
+        al_flip_display();
+
+        al_rest(0.3);
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "_OBBLERS");
+        al_flip_display();
+
+        al_rest(0.3);
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "GOBBLERS");
+        al_flip_display();
+
+
+        // ARRUME O TEMPO E OS UNDERSCORES AO CONTRARIO DA DIREÇÃO DA LETRA PROGRESSIVO
+        // DEPOIS ESPACE JUNTO
+        al_rest(0.3);
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "GOBBLERS");
+        al_flip_display();
+
+
+        al_rest(0.3);
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "GOBBLERS");
+        al_flip_display();
+
+
+        al_rest(0.3);
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "GOBBLERS");
+        al_flip_display();
+
+
+        al_rest(0.3);
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "GOBBLERS");
+        al_flip_display();
+
+
+        al_rest(0.3);
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
+        al_draw_text(fonte, cor_texto, 100, 200, 0, "GOBBLERS");
+        al_flip_display();
+
+
     }
-    
-
-
+    entrada();
 
 
 
@@ -680,10 +773,10 @@ int main()
 
     al_flip_display();
 
-    sharp();
-    circ_sup_esq(valor_forca);
-    lugar_limpeza = 1;
-    limpa(lugar_limpeza);
+    // sharp();
+    // circ_sup_esq(valor_forca);
+    // lugar_limpeza = 1;
+    // limpa(lugar_limpeza);
     al_rest(100.0); // Tempo em que a janela fica aberta
     printf("\nalterar tempo em que a janela fica aberta\n");
 
