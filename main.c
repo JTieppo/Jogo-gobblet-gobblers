@@ -59,7 +59,7 @@ int main()
     // Importa e carrega o arquivo da fonte
     ALLEGRO_FONT *fonte = al_load_font("./assets/Pixelify.ttf", 65, 0);
     ALLEGRO_FONT *fonte_inicio = al_load_font("./assets/Pixelify.ttf", 85, 0);
-    ALLEGRO_FONT *fonte_creditos_instrucoes = al_load_font("./assets/Pixelify.ttf", 40, 0);
+    ALLEGRO_FONT *fonte_creditos_instrucoes = al_load_font("./assets/Pixelify.ttf", 35, 0);
     ALLEGRO_FONT *fonte_inicio_menu_inferior = al_load_font("./assets/Pixelify.ttf", 20, 0);
 
 
@@ -764,7 +764,12 @@ int main()
 
     void creditos(){
         al_clear_to_color(cor_background);
-        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 10, 0, "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 280, 0, "Cada jogador iniciará a partida com duas");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 320, 0, "peças de cada uma das 3 forças, sendo a");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 360, 0, "força forte(3) a força fraca(1), as peças");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 400, 0, "com números menores podem ser substituidos");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 440, 0, "por peças com numeros mais altos que ela, o");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 480, 0, "jogador tem 6 peças totais ao inicio de jogo.");
         al_flip_display();
     }
 
