@@ -49,18 +49,21 @@ int main()
     ALLEGRO_COLOR cor_circulo = al_map_rgb(140, 31, 40);
     ALLEGRO_COLOR cor_retangulo = al_map_rgb(0, 0, 0);
     ALLEGRO_COLOR cor_texto = al_map_rgb(10, 200, 10);
+    ALLEGRO_COLOR cor_texto_menu_inferior = al_map_rgb(0, 0, 0);
     ALLEGRO_COLOR cor_texto_circulo = al_map_rgb(140, 31, 40);
     ALLEGRO_COLOR cor_texto_retangulo = al_map_rgb(0, 0, 0);
     // coloquei uma variavel diferente pros numeros pra se caso queira mudar a cor
 
     // Importa e carrega o arquivo da fonte
     ALLEGRO_FONT *fonte = al_load_font("./assets/Pixelify.ttf", 65, 0);
+    ALLEGRO_FONT *fonte_inicio = al_load_font("./assets/Pixelify.ttf", 85, 0);
+    ALLEGRO_FONT *fonte_inicio_menu_inferior = al_load_font("./assets/Pixelify.ttf", 20, 0);
 
     // Define caracteristicas
     int espessura_sharp = 5;
     int espessura_circulo = 4;
     int espessura_retangulo = 4;
-    int valor_forca = 3;
+    int valor_forca = 1;
     int lugar_limpeza = 1;
  
     // Limpa a tela toda para a cor de fundo
@@ -73,97 +76,65 @@ int main()
         // ARRUMA O LUGAR DAS LETRAS ESPAÇANDO E ATUALIZANDO 
         // COLOCA AS LETRAS NO CENTRO 
         // COLOCA AS OPÇÕES DE INSTRUÇÕES JOGAR CREDITOS
-        // ADICIONA OS UNDERSCORE E OS ESPACE JUNTO COM AS LETRAS 
+       // ADICIONA OS UNDERSCORE E OS ESPACE JUNTO COM AS LETRAS 
 
-
-        //al_rest();
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "_______");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "________");
+        al_draw_text(fonte_inicio, cor_texto, 10, 10, 0, " ");
+        al_rest(1.0);
+        al_draw_text(fonte_inicio, cor_texto, 260, 200, 0, "_______");
+        al_draw_text(fonte_inicio, cor_texto, 230, 300, 0, "________");
         al_flip_display();
 
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "G______");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "_______S");
+        al_rest(0.1);
+        al_draw_text(fonte_inicio, cor_texto, 260, 200, 0, "G______");
+        al_draw_text(fonte_inicio, cor_texto, 230, 300, 0, "_______S");
         al_flip_display();
         
-        al_rest(0.3);
+        al_rest(0.1);
         al_clear_to_color(cor_background);
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "GO_____");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "______RS");
+        al_draw_text(fonte_inicio, cor_texto, 260, 200, 0, "GO_____");
+        al_draw_text(fonte_inicio, cor_texto, 230, 300, 0, "______RS");
         al_flip_display();
 
-        al_rest(0.3);
+        al_rest(0.1);
         al_clear_to_color(cor_background);
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOB____");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "_____ERS");
+        al_draw_text(fonte_inicio, cor_texto, 260, 200, 0, "GOB____");
+        al_draw_text(fonte_inicio, cor_texto, 230, 300, 0, "_____ERS");
         al_flip_display();
 
-        al_rest(0.3);
+        al_rest(0.1);
         al_clear_to_color(cor_background);
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBB___");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "____LERS");
+        al_draw_text(fonte_inicio, cor_texto, 260, 200, 0, "GOBB___");
+        al_draw_text(fonte_inicio, cor_texto, 230, 300, 0, "____LERS");
         al_flip_display();
 
-        al_rest(0.3);
+        al_rest(0.1);
         al_clear_to_color(cor_background);
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBL__");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "___BLERS");
+        al_draw_text(fonte_inicio, cor_texto, 260, 200, 0, "GOBBL__");
+        al_draw_text(fonte_inicio, cor_texto, 230, 300, 0, "___BLERS");
         al_flip_display();
 
-        al_rest(0.3);
+        al_rest(0.1);
         al_clear_to_color(cor_background);
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLE_");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "__BBLERS");
+        al_draw_text(fonte_inicio, cor_texto, 260, 200, 0, "GOBBLE_");
+        al_draw_text(fonte_inicio, cor_texto, 230, 300, 0, "__BBLERS");
         al_flip_display();
 
-        al_rest(0.3);
+        al_rest(0.1);
         al_clear_to_color(cor_background);
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "_OBBLERS");
+        al_draw_text(fonte_inicio, cor_texto, 260, 200, 0, "GOBBLET");
+        al_draw_text(fonte_inicio, cor_texto, 230, 300, 0, "_OBBLERS");
         al_flip_display();
 
-        al_rest(0.3);
+        al_rest(0.1);
         al_clear_to_color(cor_background);
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "GOBBLERS");
-        al_flip_display();
-
-
-        // ARRUME O TEMPO E OS UNDERSCORES AO CONTRARIO DA DIREÇÃO DA LETRA PROGRESSIVO
-        // DEPOIS ESPACE JUNTO
-        al_rest(0.3);
-        al_clear_to_color(cor_background);
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "GOBBLERS");
+        al_draw_text(fonte_inicio, cor_texto, 260, 200, 0, "GOBBLET");
+        al_draw_text(fonte_inicio, cor_texto, 230, 300, 0, "GOBBLERS");
         al_flip_display();
 
 
-        al_rest(0.3);
-        al_clear_to_color(cor_background);
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "GOBBLERS");
-        al_flip_display();
-
-
-        al_rest(0.3);
-        al_clear_to_color(cor_background);
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "GOBBLERS");
-        al_flip_display();
-
-
-        al_rest(0.3);
-        al_clear_to_color(cor_background);
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "GOBBLERS");
-        al_flip_display();
-
-
-        al_rest(0.3);
-        al_clear_to_color(cor_background);
-        al_draw_text(fonte, cor_texto, 10, 10, 0, "GOBBLET");
-        al_draw_text(fonte, cor_texto, 100, 200, 0, "GOBBLERS");
-        al_flip_display();
-
+        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 350, 500, 0, "1 - Instruções");
+        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 349, 530, 0, "2 -    Jogar");
+        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 348, 560, 0, "3 -  Créditos");
 
     }
     entrada();
@@ -768,7 +739,6 @@ int main()
 
 
     // Comportamentos da janela(display)
-
 
 
     al_flip_display();
