@@ -24,8 +24,10 @@ int main()
     al_init_ttf_addon();        // contem load do ttf pras fontes
     al_init_font_addon();       // contm a biblioteca de escrita pra fonte
 
-    // cria ponteiro para uma janela(display)
+    // cria ponteiro para uma janela e eventos(display)
     ALLEGRO_DISPLAY *display = NULL;
+    ALLEGRO_EVENT_QUEUE *event_queue = NULL;
+    ALLEGRO_EVENT ev;
 
     // verificadores, caso negativo o programa é encerrado pra evitar problemas
     printf("\nadicionar verificadores de inicio das fontes e desenhos\n");
@@ -69,15 +71,16 @@ int main()
     // Limpa a tela toda para a cor de fundo
     al_clear_to_color(cor_background);
 
+
+    // Cria evento de leitura
+    event_queue = al_create_event_queue();
+
+    al_install_keyboard();
+    al_register_event_source(event_queue, al_get_keyboard_event_source());
+
+
     void entrada() 
     {
-        
-        // COLOCA AS LETRAS PARA APARECEREM MAIS RÁPIDO
-        // ARRUMA O LUGAR DAS LETRAS ESPAÇANDO E ATUALIZANDO 
-        // COLOCA AS LETRAS NO CENTRO 
-        // COLOCA AS OPÇÕES DE INSTRUÇÕES JOGAR CREDITOS
-       // ADICIONA OS UNDERSCORE E OS ESPACE JUNTO COM AS LETRAS 
-
         al_draw_text(fonte_inicio, cor_texto, 10, 10, 0, " ");
         al_rest(1.0);
         al_draw_text(fonte_inicio, cor_texto, 260, 200, 0, "_______");
@@ -131,15 +134,44 @@ int main()
         al_draw_text(fonte_inicio, cor_texto, 230, 300, 0, "GOBBLERS");
         al_flip_display();
 
-
-        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 350, 500, 0, "1 - Instruções");
-        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 349, 530, 0, "2 -    Jogar");
-        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 348, 560, 0, "3 -  Créditos");
-
+        al_rest(0.4);
+        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 360, 470, 0, "1 -     Jogar");
+        al_flip_display();
+        al_rest(0.2);
+        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 360, 500, 0, "2 -    Instruções");
+        al_flip_display();
+        al_rest(0.2);
+        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 360, 530, 0, "3 -    Créditos");
+        al_flip_display();
+        al_rest(0.2);
+        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 380, 750, 0, "esc -  Sair");
+        al_flip_display();
     }
     entrada();
 
+    while(1) {
+        al_wait_for_event(event_queue, &ev);
 
+        if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
+            switch(ev.keyboard.keycode) {
+                case ALLEGRO_KEY_1:
+                    jogar();
+                    break;
+                case ALLEGRO_KEY_2:
+                    instrucoes();
+                    break;
+
+                case ALLEGRO_KEY_3:
+                    creditos();
+                    break;
+
+                case ALLEGRO_KEY_ESCAPE:
+                    printf("A tecla 'ESC' foi pressionada.\n");
+                    return 0;
+            }
+        }
+    }
+    
 
     // Desenha o tabuleiro
     void sharp()
