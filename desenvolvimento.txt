@@ -64,15 +64,3 @@ VERSÃO 3.0:
 VERSÃO 3.1:
     Cria o menu do jogo com as funções de telas para jogar, os creditos e instruções de jogo, também foi adicionado leitura de 
     teclas para entrar e sair dos menus escolhidos e fechar o jogo com esc, incluindo as informações das instruções e créditos
-
-    
-VERSÃO 3.2:
-    Precisa ser criado o backend do jogo mas pra isso primeiro temos que saber como será a entrada de informações, o allegro não 
-    tem inputbox então teria que utilizar algo como leitura de teclas e fazer a verificação de confirmação por enter por exmplo
-    também vi que(não sei se tem mesmo) uma função que rastreia o mouse mas não sei como funcionaria, de qualquer forma acredito 
-    que tenha que utilizar algo como event_queue, depois de validar as entradas do usuário é só fazer uma verificação de se O
-    lugar o qual ele escolheu esta disponível ou se pode colocar uma peça mais forte, depois da verificação é só chamar a função
-    desejada de desenho(o jogo fará) e limpeza.
-
-VERSÃO 3.3:
-    Implementa uma verificação de vencedor, um placar, score e se necessário correção de erros.
