@@ -59,7 +59,9 @@ int main()
     // Importa e carrega o arquivo da fonte
     ALLEGRO_FONT *fonte = al_load_font("./assets/Pixelify.ttf", 65, 0);
     ALLEGRO_FONT *fonte_inicio = al_load_font("./assets/Pixelify.ttf", 85, 0);
+    ALLEGRO_FONT *fonte_creditos_instrucoes = al_load_font("./assets/Pixelify.ttf", 40, 0);
     ALLEGRO_FONT *fonte_inicio_menu_inferior = al_load_font("./assets/Pixelify.ttf", 20, 0);
+
 
     // Define caracteristicas
     int espessura_sharp = 5;
@@ -149,29 +151,6 @@ int main()
     }
     entrada();
 
-    while(1) {
-        al_wait_for_event(event_queue, &ev);
-
-        if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
-            switch(ev.keyboard.keycode) {
-                case ALLEGRO_KEY_1:
-                    jogar();
-                    break;
-                case ALLEGRO_KEY_2:
-                    instrucoes();
-                    break;
-
-                case ALLEGRO_KEY_3:
-                    creditos();
-                    break;
-
-                case ALLEGRO_KEY_ESCAPE:
-                    printf("A tecla 'ESC' foi pressionada.\n");
-                    return 0;
-            }
-        }
-    }
-    
 
     // Desenha o tabuleiro
     void sharp()
@@ -775,6 +754,48 @@ int main()
 
     al_flip_display();
 
+    void jogar(){
+        printf("terminar");
+    }
+
+    void instrucoes(){
+        printf("terminar");
+    }
+
+    void creditos(){
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 10, 0, "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas");
+        al_flip_display();
+    }
+
+    while(1) {
+        al_wait_for_event(event_queue, &ev);
+
+        if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
+            switch(ev.keyboard.keycode) {
+                case ALLEGRO_KEY_1:
+                    jogar();
+                    break;
+                case ALLEGRO_KEY_2:
+                    instrucoes();
+                    break;
+
+                case ALLEGRO_KEY_3:
+                    creditos();
+                    break;
+
+                case ALLEGRO_KEY_ESCAPE:
+                    printf("A tecla 'ESC' foi pressionada.\n");
+                    return 0;
+
+                default:
+                    break;
+            }
+        }
+    }
+    
+
+
     // sharp();
     // circ_sup_esq(valor_forca);
     // lugar_limpeza = 1;
@@ -784,6 +805,7 @@ int main()
 
     // Finaliza, fecha e limpa memoria
     al_destroy_display(display);
+    al_destroy_event_queue(event_queue);
 
     return 0;
 }
