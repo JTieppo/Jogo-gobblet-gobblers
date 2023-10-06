@@ -83,6 +83,7 @@ int main()
 
     void entrada() 
     {
+        al_flip_display();
         al_draw_text(fonte_inicio, cor_texto, 10, 10, 0, " ");
         al_rest(1.0);
         al_draw_text(fonte_inicio, cor_texto, 260, 200, 0, "_______");
@@ -755,22 +756,87 @@ int main()
     al_flip_display();
 
     void jogar(){
-        printf("terminar");
+        
+                while(1) {
+            al_wait_for_event(event_queue, &ev);
+
+            if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
+                switch(ev.keyboard.keycode) {
+                    case ALLEGRO_KEY_ESCAPE:
+                        printf("A tecla 'ESC' foi pressionada.\n");
+                        al_clear_to_color(cor_background);
+                        al_draw_text(fonte_inicio, cor_texto, 240, 350, 0, "Aguarde");
+                        al_draw_text(fonte_inicio, cor_texto, 200, 430, 0, "voltando...");
+                        al_flip_display();
+                        entrada();
+                        return 0;
+
+                    default:
+                        break;
+                }
+            }
+        }
     }
 
     void instrucoes(){
-        printf("terminar");
+        al_clear_to_color(cor_background);
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 280, 0, "Cada jogador iniciará a partida com duas");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 320, 0, "peças de cada uma das 3 forças, sendo a");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 360, 0, "força forte(3) e a força fraca(1), as peças");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 400, 0, "com números menores podem ser substituidas");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 440, 0, "por peças com numeros mais altos que ela, o");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 480, 0, "jogador tem 6 peças totais ao inicio de jogo.");
+        al_flip_display();
+        while(1) {
+            al_wait_for_event(event_queue, &ev);
+
+            if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
+                switch(ev.keyboard.keycode) {
+                    case ALLEGRO_KEY_ESCAPE:
+                        printf("A tecla 'ESC' foi pressionada.\n");
+                        al_clear_to_color(cor_background);
+                        al_draw_text(fonte_inicio, cor_texto, 240, 350, 0, "Aguarde");
+                        al_draw_text(fonte_inicio, cor_texto, 200, 430, 0, "voltando...");
+                        al_flip_display();
+                        entrada();
+                        return 0;
+
+                    default:
+                        break;
+                }
+            }
+        }
     }
 
     void creditos(){
         al_clear_to_color(cor_background);
-        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 280, 0, "Cada jogador iniciará a partida com duas");
-        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 320, 0, "peças de cada uma das 3 forças, sendo a");
-        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 360, 0, "força forte(3) a força fraca(1), as peças");
-        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 400, 0, "com números menores podem ser substituidos");
-        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 440, 0, "por peças com numeros mais altos que ela, o");
-        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 480, 0, "jogador tem 6 peças totais ao inicio de jogo.");
+        al_draw_text(fonte_inicio, cor_texto, 70, 150, 0, "Desenvolvedores");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 150, 320, 0, "- Emerson Alexandre Tieppo Junior");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 150, 400, 0, "- Lucas Hiroshi Okamoto Catuyama");       
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 150, 480, 0, "- Misael Correia");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 670, 0, "Discentes de graduação no curso de bacharel");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 40, 700, 0, "em engenharia de software do 1° semestre.");
+        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 350, 800, 0, "esc - voltar");
         al_flip_display();
+        while(1) {
+            al_wait_for_event(event_queue, &ev);
+
+            if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
+                switch(ev.keyboard.keycode) {
+                    case ALLEGRO_KEY_ESCAPE:
+                        printf("A tecla 'ESC' foi pressionada.\n");
+                        al_clear_to_color(cor_background);
+                        al_draw_text(fonte_inicio, cor_texto, 240, 350, 0, "Aguarde");
+                        al_draw_text(fonte_inicio, cor_texto, 200, 430, 0, "voltando...");
+                        al_flip_display();
+                        entrada();
+                        return 0;
+
+                    default:
+                        break;
+                }
+            }
+        }
     }
 
     while(1) {
@@ -798,6 +864,7 @@ int main()
             }
         }
     }
+
     
 
 
