@@ -877,72 +877,162 @@ int main()
 
                     case ALLEGRO_KEY_1:
                         le_valor_forca();
-                        //circ_sup_esq(valor_forca);
-                        rect_sup_esq(valor_forca);
-                        
+                        if (contador % 2 == 0){
+                            circ_sup_esq(valor_forca);
+                            contador++;
+                        } else if (contador % 2 == 1)
+                        {
+                            rect_sup_esq(valor_forca);
+                            contador++;
+                        } else {
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
+
+                        }
                         break;
 
 
                     case ALLEGRO_KEY_2:
                         le_valor_forca();
-                        //circ_sup_meio(valor_forca);
-                        rect_sup_meio(valor_forca);
+                        if (contador % 2 == 0){
+                            circ_sup_meio(valor_forca);
+                            contador++;
+                        } else if (contador % 2 == 1)
+                        {
+                            rect_sup_meio(valor_forca);
+                            contador++;
+                        } else {
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
 
+                        }
                         break;
 
 
                     case ALLEGRO_KEY_3:
                         le_valor_forca();
-                        //circ_sup_dir(valor_forca);
-                        rect_sup_dir(valor_forca);
+                        if (contador % 2 == 0){
+                            circ_sup_dir(valor_forca);
+                            contador++;
+                        } else if (contador % 2 == 1)
+                        {
+                            rect_sup_dir(valor_forca);
+                            contador++;
+                        } else {
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
 
+                        }
                         break;
 
 
                     case ALLEGRO_KEY_4:
                         le_valor_forca();
-                        //circ_meio_esq(valor_forca);
-                        rect_meio_esq(valor_forca);
+                        if (contador % 2 == 0){
+                            circ_meio_esq(valor_forca);
+                            contador++;
+                        } else if (contador % 2 == 1)
+                        {
+                            rect_meio_esq(valor_forca);
+                            contador++;
+                        } else {
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
 
+                        }
                         break;
 
 
                     case ALLEGRO_KEY_5:
                         le_valor_forca();
-                        //circ_meio_meio(valor_forca);
-                        rect_meio_meio(valor_forca);
+                        if (contador % 2 == 0){
+                            circ_meio_meio(valor_forca);
+                            contador++;
+                        } else if (contador % 2 == 1)
+                        {
+                            rect_meio_meio(valor_forca);
+                            contador++;
+                        } else {
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
 
+                        }
                         break;
 
 
                     case ALLEGRO_KEY_6:
                         le_valor_forca();
-                        //circ_meio_dir(valor_forca);
-                        rect_meio_dir(valor_forca);
+                        if (contador % 2 == 0){
+                            circ_meio_dir(valor_forca);
+                            contador++;
+                        } else if (contador % 2 == 1)
+                        {
+                            rect_meio_dir(valor_forca);
+                            contador++;
+                        } else {
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
 
+                        }
                         break;
 
                     case ALLEGRO_KEY_7:
                         le_valor_forca();
-                        //circ_inf_esq(valor_forca);
-                        rect_inf_esq(valor_forca);
+                        if (contador % 2 == 0){
+                            circ_inf_esq(valor_forca);
+                            contador++;
+                        } else if (contador % 2 == 1)
+                        {
+                            rect_inf_esq(valor_forca);
+                            contador++;
+                        } else {
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
 
+                        }
                         break;
 
 
                     case ALLEGRO_KEY_8:
                         le_valor_forca();
-                        //circ_inf_meio(valor_forca);
-                        rect_inf_meio(valor_forca);
+                        if (contador % 2 == 0){
+                            circ_inf_meio(valor_forca);
+                            contador++;
+                        } else if (contador % 2 == 1)
+                        {
+                            rect_inf_meio(valor_forca);
+                            contador++;
+                        } else {
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
 
+                        }
                         break;
 
                         
                     case ALLEGRO_KEY_9:
                         le_valor_forca();
-                        //circ_inf_dir(valor_forca);
-                        rect_inf_dir(valor_forca);
+                        if (contador % 2 == 0){
+                            circ_inf_dir(valor_forca);
+                            contador++;
+                        } else if (contador % 2 == 1)
+                        {
+                            rect_inf_dir(valor_forca);
+                            contador++;
+                        } else {
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
 
+                        }
                         break;
 
 
