@@ -7,8 +7,7 @@
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_ttf.h>
 
-int main()
-{
+int main() {
     setlocale(LC_ALL, "Portuguese");
 
     // PONTOS DE DESTAQUE
@@ -84,9 +83,7 @@ int main()
     al_install_keyboard();
     al_register_event_source(event_queue, al_get_keyboard_event_source());
 
-
-    void entrada() 
-    {
+    void entrada() {
         al_flip_display();
         al_draw_text(fonte_inicio, cor_texto, 10, 10, 0, " ");
         al_rest(1.0);
@@ -156,10 +153,8 @@ int main()
     }
     entrada();
 
-
     // Desenha o tabuleiro
-    void sharp()
-    {
+    void sharp() {
         al_draw_line(300, 250, 300, 750, cor_linha, espessura_sharp); // verticar esquerda
         al_draw_line(600, 250, 600, 750, cor_linha, espessura_sharp); // vertical direita
         al_draw_line(200, 350, 700, 350, cor_linha, espessura_sharp); // horizontal superior
@@ -180,262 +175,244 @@ int main()
 
     // DESENHA OS CIRCULOS
     // superior esquerdo
-    void circ_sup_esq(valor_forca) 
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_circle(200, 250, 30, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 185, 210, 0, "1");
-            al_flip_display();    
-            break;
+    void circ_sup_esq(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_circle(200, 250, 30, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 185, 210, 0, "1");
+                al_flip_display();    
+                break;
 
-        case 2:
-            al_draw_circle(200, 250, 40, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 185, 210, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_circle(200, 250, 40, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 185, 210, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_circle(200, 250, 50, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 185, 210, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_circle(200, 250, 50, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 185, 210, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
 
     // meio esquerdo
-    void circ_meio_esq(valor_forca) 
-    {
-        switch (valor_forca) 
-        {
-        case 1:
-            al_draw_circle(200, 490, 30, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 185, 450, 0, "1");
-            al_flip_display();
-            break;
+    void circ_meio_esq(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_circle(200, 490, 30, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 185, 450, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_circle(200, 490, 40, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 185, 450, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_circle(200, 490, 40, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 185, 450, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_circle(200, 490, 50, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 185, 450, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_circle(200, 490, 50, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 185, 450, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
     
     // inferior esquerdo
-    void circ_inf_esq(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_circle(200, 750, 30, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 185, 710, 0, "1");
-            al_flip_display();
-            break;
+    void circ_inf_esq(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_circle(200, 750, 30, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 185, 710, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_circle(200, 750, 40, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 185, 710, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_circle(200, 750, 40, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 185, 710, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_circle(200, 750, 50, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 185, 710, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_circle(200, 750, 50, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 185, 710, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
     
     // superior meio
-    void circ_sup_meio(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_circle(450, 250, 30, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 430, 210, 0, "1");
-            al_flip_display();
-            break;
+    void circ_sup_meio(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_circle(450, 250, 30, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 430, 210, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_circle(450, 250, 40, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 430, 210, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_circle(450, 250, 40, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 430, 210, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_circle(450, 250, 50, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 430, 210, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_circle(450, 250, 50, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 430, 210, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
 
     // meio meio
-    void circ_meio_meio(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_circle(450, 490, 30, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 430, 450, 0, "1");
-            al_flip_display();
-            break;
+    void circ_meio_meio(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_circle(450, 490, 30, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 430, 450, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_circle(450, 490, 40, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 430, 450, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_circle(450, 490, 40, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 430, 450, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_circle(450, 490, 50, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 430, 450, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_circle(450, 490, 50, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 430, 450, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
    
     // inferior meio
-    void circ_inf_meio(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_circle(450, 750, 30, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 430, 710, 0, "1");
-            al_flip_display();            
-            break;
+    void circ_inf_meio(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_circle(450, 750, 30, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 430, 710, 0, "1");
+                al_flip_display();            
+                break;
 
-        case 2:
-            al_draw_circle(450, 750, 40, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 430, 710, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_circle(450, 750, 40, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 430, 710, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_circle(450, 750, 50, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 430, 710, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_circle(450, 750, 50, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 430, 710, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
 
     // superior direito
-    void circ_sup_dir(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_circle(700, 250, 30, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 680, 210, 0, "1");
-            al_flip_display();
-            break;
+    void circ_sup_dir(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_circle(700, 250, 30, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 680, 210, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_circle(700, 250, 40, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 680, 210, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_circle(700, 250, 40, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 680, 210, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_circle(700, 250, 50, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 680, 210, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_circle(700, 250, 50, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 680, 210, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
     
     // meio direito
-    void circ_meio_dir(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_circle(700, 490, 30, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 680, 450, 0, "1");
-            al_flip_display();
-            break;
+    void circ_meio_dir(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_circle(700, 490, 30, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 680, 450, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_circle(700, 490, 40, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 680, 450, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_circle(700, 490, 40, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 680, 450, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_circle(700, 490, 50, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 680, 450, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_circle(700, 490, 50, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 680, 450, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
 
     // inferior direito
-    void circ_inf_dir(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_circle(700, 750, 30, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 680, 710, 0, "1");
-            al_flip_display();
-            break;
+    void circ_inf_dir(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_circle(700, 750, 30, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 680, 710, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_circle(700, 750, 40, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 680, 710, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_circle(700, 750, 40, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 680, 710, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_circle(700, 750, 50, cor_circulo, espessura_circulo);
-            al_draw_text(fonte, cor_circulo, 680, 710, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_circle(700, 750, 50, cor_circulo, espessura_circulo);
+                al_draw_text(fonte, cor_circulo, 680, 710, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
     // FIM CIRCULOS
@@ -444,333 +421,306 @@ int main()
 
     // DESENHA OS RETANGULOS
     // superior esquerdo
-    void rect_sup_esq(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_rectangle(170, 220, 230, 280, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 185, 210, 0, "1");
-            al_flip_display();
-            break;
+    void rect_sup_esq(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_rectangle(170, 220, 230, 280, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 185, 210, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_rectangle(160, 210, 240, 290, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 185, 210, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_rectangle(160, 210, 240, 290, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 185, 210, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_rectangle(150, 200, 250, 300, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 185, 210, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_rectangle(150, 200, 250, 300, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 185, 210, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
 
     // meio esquerdo
-    void rect_meio_esq(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_rectangle(170, 460, 230, 520, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 185, 450, 0, "1");
-            al_flip_display();
-            break;
+    void rect_meio_esq(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_rectangle(170, 460, 230, 520, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 185, 450, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_rectangle(160, 450, 240, 530, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 185, 450, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_rectangle(160, 450, 240, 530, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 185, 450, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_rectangle(150, 440, 250, 540, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 185, 450, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_rectangle(150, 440, 250, 540, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 185, 450, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
 
     // inferior esquerdo
-    void rect_inf_esq(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_rectangle(170, 720, 230, 780, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 185, 710, 0, "1");
-            al_flip_display();
-            break;
+    void rect_inf_esq(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_rectangle(170, 720, 230, 780, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 185, 710, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_rectangle(160, 710, 240, 790, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 185, 710, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_rectangle(160, 710, 240, 790, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 185, 710, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_rectangle(150, 700, 250, 800, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 185, 710, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_rectangle(150, 700, 250, 800, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 185, 710, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
 
     // superior meio
-    void rect_sup_meio(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_rectangle(420, 220, 480, 280, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 430, 210, 0, "1");
-            al_flip_display();
-            break;
+    void rect_sup_meio(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_rectangle(420, 220, 480, 280, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 430, 210, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_rectangle(410, 210, 490, 290, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 430, 210, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_rectangle(410, 210, 490, 290, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 430, 210, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_rectangle(400, 200, 500, 300, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 430, 210, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_rectangle(400, 200, 500, 300, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 430, 210, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
 
     // meio meio
-    void rect_meio_meio(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_rectangle(420, 460, 480, 520, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 430, 450, 0, "1");
-            al_flip_display();
-            break;
+    void rect_meio_meio(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_rectangle(420, 460, 480, 520, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 430, 450, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_rectangle(410, 450, 490, 530, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 430, 450, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_rectangle(410, 450, 490, 530, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 430, 450, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_rectangle(400, 440, 500, 540, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 430, 450, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_rectangle(400, 440, 500, 540, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 430, 450, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
 
     // inferior meio
-    void rect_inf_meio(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_rectangle(420, 720, 480, 780, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 430, 710, 0, "1");
-            al_flip_display();
-            break;
+    void rect_inf_meio(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_rectangle(420, 720, 480, 780, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 430, 710, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_rectangle(410, 710, 490, 790, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 430, 710, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_rectangle(410, 710, 490, 790, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 430, 710, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_rectangle(400, 700, 500, 800, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 430, 710, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_rectangle(400, 700, 500, 800, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 430, 710, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
 
     // superior direito
-    void rect_sup_dir(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_rectangle(670, 220, 730, 280, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 680, 210, 0, "1");
-            al_flip_display();
-            break;
+    void rect_sup_dir(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_rectangle(670, 220, 730, 280, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 680, 210, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_rectangle(660, 210, 740, 290, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 680, 210, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_rectangle(660, 210, 740, 290, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 680, 210, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_rectangle(650, 200, 750, 300, cor_retangulo, espessura_retangulo);            
-            al_draw_text(fonte, cor_retangulo, 680, 210, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_rectangle(650, 200, 750, 300, cor_retangulo, espessura_retangulo);            
+                al_draw_text(fonte, cor_retangulo, 680, 210, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
 
     // meio direito
-    void rect_meio_dir(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_rectangle(670, 460, 730, 520, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 680, 450, 0, "1");
-            al_flip_display();
-            break;
+    void rect_meio_dir(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_rectangle(670, 460, 730, 520, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 680, 450, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_rectangle(660, 450, 740, 530, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 680, 450, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_rectangle(660, 450, 740, 530, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 680, 450, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_rectangle(650, 440, 750, 540, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 680, 450, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_rectangle(650, 440, 750, 540, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 680, 450, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
 
 
     // inferior direito
-    void rect_inf_dir(valor_forca)
-    {
-        switch (valor_forca)
-        {
-        case 1:
-            al_draw_rectangle(670, 720, 730, 780, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 680, 710, 0, "1");
-            al_flip_display();
-            break;
+    void rect_inf_dir(valor_forca) {
+        switch (valor_forca) {
+            case 1:
+                al_draw_rectangle(670, 720, 730, 780, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 680, 710, 0, "1");
+                al_flip_display();
+                break;
 
-        case 2:
-            al_draw_rectangle(660, 710, 740, 790, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 680, 710, 0, "2");
-            al_flip_display();
-            break;
+            case 2:
+                al_draw_rectangle(660, 710, 740, 790, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 680, 710, 0, "2");
+                al_flip_display();
+                break;
 
-        case 3:
-            al_draw_rectangle(650, 700, 750, 800, cor_retangulo, espessura_retangulo);
-            al_draw_text(fonte, cor_retangulo, 680, 710, 0, "3");
-            al_flip_display();
-            break;
+            case 3:
+                al_draw_rectangle(650, 700, 750, 800, cor_retangulo, espessura_retangulo);
+                al_draw_text(fonte, cor_retangulo, 680, 710, 0, "3");
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
     // FIM RETANGULOS
 
 
     // Limpa os lugares para serem substituidos    
-    void limpa(lugar_limpeza, cor_backgroud){
-        switch (lugar_limpeza)
-        {
-        case 1: //limpa_superior_esquerdo
-            al_draw_filled_rectangle(140, 190, 280, 310, cor_background);
-            al_flip_display();
-            break;
-        
-        case 2: //limpa meio esquerdo
-            al_draw_filled_rectangle(140, 390, 280, 600, cor_background);
-            al_flip_display();
-            break;
+    void limpa(lugar_limpeza, cor_backgroud) {
+        switch (lugar_limpeza) {
+            case 1: //limpa_superior_esquerdo
+                al_draw_filled_rectangle(140, 190, 280, 310, cor_background);
+                al_flip_display();
+                break;
+            
+            case 2: //limpa meio esquerdo
+                al_draw_filled_rectangle(140, 390, 280, 600, cor_background);
+                al_flip_display();
+                break;
 
-        case 3: //limpa inferior esquerdo
-            al_draw_filled_rectangle(140, 690, 280, 850, cor_background);
-            al_flip_display();
-            break;
+            case 3: //limpa inferior esquerdo
+                al_draw_filled_rectangle(140, 690, 280, 850, cor_background);
+                al_flip_display();
+                break;
 
-        case 4: //limpa superior meio
-            al_draw_filled_rectangle(340, 190, 560, 310, cor_background);
-            al_flip_display();
-            break;
+            case 4: //limpa superior meio
+                al_draw_filled_rectangle(340, 190, 560, 310, cor_background);
+                al_flip_display();
+                break;
 
-        case 5: //limpa meio_meio
-            al_draw_filled_rectangle(340, 390, 560, 600, cor_background);
-            al_flip_display();
-            break;
+            case 5: //limpa meio_meio
+                al_draw_filled_rectangle(340, 390, 560, 600, cor_background);
+                al_flip_display();
+                break;
 
-        case 6: //limpa meio inferior
-            al_draw_filled_rectangle(340, 690, 560, 850, cor_background);
-            al_flip_display();
-            break;
+            case 6: //limpa meio inferior
+                al_draw_filled_rectangle(340, 690, 560, 850, cor_background);
+                al_flip_display();
+                break;
 
-        case 7: //limpa superior direito
-            al_draw_filled_rectangle(640, 190, 780, 310, cor_background);
-            al_flip_display();
-            break;
+            case 7: //limpa superior direito
+                al_draw_filled_rectangle(640, 190, 780, 310, cor_background);
+                al_flip_display();
+                break;
 
-        case 8: //limpa meio direito
-            al_draw_filled_rectangle(640, 390, 780, 600, cor_background);
-            al_flip_display();
-            break;
+            case 8: //limpa meio direito
+                al_draw_filled_rectangle(640, 390, 780, 600, cor_background);
+                al_flip_display();
+                break;
 
-        case 9: //limpa inferior direito
-            al_draw_filled_rectangle(640, 690, 780, 850, cor_background);
-            al_flip_display();
-            break;
+            case 9: //limpa inferior direito
+                al_draw_filled_rectangle(640, 690, 780, 850, cor_background);
+                al_flip_display();
+                break;
 
-        default:
-            break;
+            default:
+                break;
         }
     }
-    
- 
-
-
-
 
     // Comportamentos da janela(display)
-
-
     al_flip_display();
 
-
-    void instrucoes(){
+    void instrucoes() {
         al_clear_to_color(cor_background);
         al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 280, 0, "Cada jogador iniciará a partida com duas");
         al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 320, 0, "peças de cada uma das 3 forças, sendo a");
@@ -800,7 +750,7 @@ int main()
         }
     }
 
-    void creditos(){
+    void creditos() {
         al_clear_to_color(cor_background);
         al_draw_text(fonte_inicio, cor_texto, 70, 150, 0, "Desenvolvedores");
         al_draw_text(fonte_creditos_instrucoes, cor_texto, 150, 320, 0, "- Emerson Alexandre Tieppo Junior");
@@ -810,9 +760,9 @@ int main()
         al_draw_text(fonte_creditos_instrucoes, cor_texto, 40, 700, 0, "em engenharia de software do 1° semestre.");
         al_draw_text(fonte_inicio_menu_inferior, cor_texto, 350, 800, 0, "esc - voltar");
         al_flip_display();
+
         while(1) {
             al_wait_for_event(event_queue, &ev);
-
             if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
                 switch(ev.keyboard.keycode) {
                     case ALLEGRO_KEY_ESCAPE:
@@ -834,7 +784,6 @@ int main()
     void le_valor_forca(){
         while(1) {
             al_wait_for_event(event_queue, &ev);
-
             if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
                 switch(ev.keyboard.keycode) {
                     case ALLEGRO_KEY_1:
@@ -866,7 +815,6 @@ int main()
 
         while(1) {
             al_wait_for_event(event_queue, &ev);
-
             if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
                 switch(ev.keyboard.keycode) {
                     case ALLEGRO_KEY_ESCAPE:
@@ -883,9 +831,12 @@ int main()
                         if (contador % 2 == 0){
                             if (valor_forca == 1 && circulos_um > 0){
                                 circ_sup_esq(valor_forca);
-                                contador++;
+                                contador ++;
                                 circulos_um --;
+                            } else {
+                                printf("indisponivel");
                             }
+
                         } else if (contador % 2 == 1)
                         {
                             rect_sup_esq(valor_forca);
@@ -993,8 +944,7 @@ int main()
                         if (contador % 2 == 0){
                             circ_inf_esq(valor_forca);
                             contador++;
-                        } else if (contador % 2 == 1)
-                        {
+                        } else if (contador % 2 == 1) {
                             rect_inf_esq(valor_forca);
                             contador++;
                         } else {
@@ -1008,11 +958,10 @@ int main()
 
                     case ALLEGRO_KEY_8:
                         le_valor_forca();
-                        if (contador % 2 == 0){
+                        if (contador % 2 == 0) {
                             circ_inf_meio(valor_forca);
                             contador++;
-                        } else if (contador % 2 == 1)
-                        {
+                        } else if (contador % 2 == 1) {
                             rect_inf_meio(valor_forca);
                             contador++;
                         } else {
@@ -1026,11 +975,10 @@ int main()
                         
                     case ALLEGRO_KEY_9:
                         le_valor_forca();
-                        if (contador % 2 == 0){
+                        if (contador % 2 == 0) {
                             circ_inf_dir(valor_forca);
                             contador++;
-                        } else if (contador % 2 == 1)
-                        {
+                        } else if (contador % 2 == 1) {
                             rect_inf_dir(valor_forca);
                             contador++;
                         } else {
@@ -1051,12 +999,12 @@ int main()
 
     while(1) {
         al_wait_for_event(event_queue, &ev);
-
         if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
             switch(ev.keyboard.keycode) {
                 case ALLEGRO_KEY_1:
                     jogar();
                     break;
+
                 case ALLEGRO_KEY_2:
                     instrucoes();
                     break;
