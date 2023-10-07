@@ -719,7 +719,6 @@ int main() {
 
     // Comportamentos da janela(display)
     al_flip_display();
-
     void instrucoes() {
         al_clear_to_color(cor_background);
         al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 280, 0, "Cada jogador iniciará a partida com duas");
@@ -781,7 +780,7 @@ int main() {
         }
     }
 
-    void le_valor_forca(){
+    void le_valor_forca() {
         while(1) {
             al_wait_for_event(event_queue, &ev);
             if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
@@ -790,6 +789,7 @@ int main() {
                         valor_forca = 1;
                         return 0;
                         break;
+
                     case ALLEGRO_KEY_2:
                         valor_forca = 2;
                         return 0;
@@ -808,7 +808,7 @@ int main() {
     }
 
 
-    void jogar(){
+    void jogar() {
         al_clear_to_color(cor_background);
         sharp();
         al_flip_display();
@@ -828,7 +828,7 @@ int main() {
 
                     case ALLEGRO_KEY_1:
                         le_valor_forca();
-                        if (contador % 2 == 0){
+                        if (contador % 2 == 0) {
                             if (valor_forca == 1 && circulos_um > 0){
                                 circ_sup_esq(valor_forca);
                                 contador ++;
@@ -837,8 +837,7 @@ int main() {
                                 printf("indisponivel");
                             }
 
-                        } else if (contador % 2 == 1)
-                        {
+                        } else if (contador % 2 == 1) {
                             rect_sup_esq(valor_forca);
                             contador++;
                         } else {
@@ -852,11 +851,10 @@ int main() {
 
                     case ALLEGRO_KEY_2:
                         le_valor_forca();
-                        if (contador % 2 == 0){
+                        if (contador % 2 == 0) {
                             circ_sup_meio(valor_forca);
                             contador++;
-                        } else if (contador % 2 == 1)
-                        {
+                        } else if (contador % 2 == 1) {
                             rect_sup_meio(valor_forca);
                             contador++;
                         } else {
@@ -870,11 +868,10 @@ int main() {
 
                     case ALLEGRO_KEY_3:
                         le_valor_forca();
-                        if (contador % 2 == 0){
+                        if (contador % 2 == 0) {
                             circ_sup_dir(valor_forca);
                             contador++;
-                        } else if (contador % 2 == 1)
-                        {
+                        } else if (contador % 2 == 1) {
                             rect_sup_dir(valor_forca);
                             contador++;
                         } else {
@@ -888,11 +885,10 @@ int main() {
 
                     case ALLEGRO_KEY_4:
                         le_valor_forca();
-                        if (contador % 2 == 0){
+                        if (contador % 2 == 0) {
                             circ_meio_esq(valor_forca);
                             contador++;
-                        } else if (contador % 2 == 1)
-                        {
+                        } else if (contador % 2 == 1) {
                             rect_meio_esq(valor_forca);
                             contador++;
                         } else {
@@ -906,11 +902,10 @@ int main() {
 
                     case ALLEGRO_KEY_5:
                         le_valor_forca();
-                        if (contador % 2 == 0){
+                        if (contador % 2 == 0) {
                             circ_meio_meio(valor_forca);
                             contador++;
-                        } else if (contador % 2 == 1)
-                        {
+                        } else if (contador % 2 == 1) {
                             rect_meio_meio(valor_forca);
                             contador++;
                         } else {
@@ -924,24 +919,22 @@ int main() {
 
                     case ALLEGRO_KEY_6:
                         le_valor_forca();
-                        if (contador % 2 == 0){
+                        if (contador % 2 == 0) {
                             circ_meio_dir(valor_forca);
                             contador++;
-                        } else if (contador % 2 == 1)
-                        {
+                        } else if (contador % 2 == 1) {
                             rect_meio_dir(valor_forca);
                             contador++;
                         } else {
                             al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
                             al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
                             al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
-
                         }
                         break;
 
                     case ALLEGRO_KEY_7:
                         le_valor_forca();
-                        if (contador % 2 == 0){
+                        if (contador % 2 == 0) {
                             circ_inf_esq(valor_forca);
                             contador++;
                         } else if (contador % 2 == 1) {
