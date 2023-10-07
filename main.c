@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdbool.h>
+#include <unistd.h>
 
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
@@ -69,6 +70,7 @@ int main()
     int espessura_retangulo = 4;
     int valor_forca = 1;
     int lugar_limpeza = 1;
+    int contador = 0;
  
     // Limpa a tela toda para a cor de fundo
     al_clear_to_color(cor_background);
@@ -156,13 +158,23 @@ int main()
     // Desenha o tabuleiro
     void sharp()
     {
-        al_draw_line(300, 250, 300, 750, cor_linha, espessura_sharp);
-        al_draw_line(600, 250, 600, 750, cor_linha, espessura_sharp);
-        al_draw_line(200, 350, 700, 350, cor_linha, espessura_sharp);
-        al_draw_line(200, 650, 700, 650, cor_linha, espessura_sharp);
+        al_draw_line(300, 250, 300, 750, cor_linha, espessura_sharp); // verticar esquerda
+        al_draw_line(600, 250, 600, 750, cor_linha, espessura_sharp); // vertical direita
+        al_draw_line(200, 350, 700, 350, cor_linha, espessura_sharp); // horizontal superior
+        al_draw_line(200, 650, 700, 650, cor_linha, espessura_sharp); // horizontal inferior
+
+        al_draw_text(fonte, cor_texto, 370, 5, 0, "1");
+        al_draw_text(fonte, cor_texto, 410, 5, 0, "2");
+        al_draw_text(fonte, cor_texto, 460, 5, 0, "3");
+        al_draw_text(fonte, cor_texto, 360, 50, 0, "4");
+        al_draw_text(fonte, cor_texto, 410, 50, 0, "5");
+        al_draw_text(fonte, cor_texto, 460, 50, 0, "6");
+        al_draw_text(fonte, cor_texto, 360, 100, 0, "7");
+        al_draw_text(fonte, cor_texto, 410, 100, 0, "8");
+        al_draw_text(fonte, cor_texto, 460, 100, 0, "9");
+        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 270, 170, 0, "Digite a posição e o número da peça");
         al_flip_display();
     }
-
 
     // DESENHA OS CIRCULOS
     // superior esquerdo
@@ -546,7 +558,7 @@ int main()
 
 
     // meio meio
-    void rect__meio_meio(valor_forca)
+    void rect_meio_meio(valor_forca)
     {
         switch (valor_forca)
         {
@@ -638,19 +650,19 @@ int main()
         switch (valor_forca)
         {
         case 1:
-            al_draw_rectangle(650, 440, 750, 540, cor_retangulo, espessura_retangulo);
+            al_draw_rectangle(670, 460, 730, 520, cor_retangulo, espessura_retangulo);
             al_draw_text(fonte, cor_retangulo, 680, 450, 0, "1");
             al_flip_display();
             break;
 
         case 2:
-            al_draw_rectangle(660, 450, 740, 530, cor_retangulo, espessura_retangulo);al_draw_rectangle(670, 460, 730, 520, cor_retangulo, espessura_retangulo);
+            al_draw_rectangle(660, 450, 740, 530, cor_retangulo, espessura_retangulo);
             al_draw_text(fonte, cor_retangulo, 680, 450, 0, "2");
             al_flip_display();
             break;
 
         case 3:
-            al_draw_rectangle(660, 450, 740, 530, cor_retangulo, espessura_retangulo);
+            al_draw_rectangle(650, 440, 750, 540, cor_retangulo, espessura_retangulo);
             al_draw_text(fonte, cor_retangulo, 680, 450, 0, "3");
             al_flip_display();
             break;
@@ -755,28 +767,6 @@ int main()
 
     al_flip_display();
 
-    void jogar(){
-        
-                while(1) {
-            al_wait_for_event(event_queue, &ev);
-
-            if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
-                switch(ev.keyboard.keycode) {
-                    case ALLEGRO_KEY_ESCAPE:
-                        printf("A tecla 'ESC' foi pressionada.\n");
-                        al_clear_to_color(cor_background);
-                        al_draw_text(fonte_inicio, cor_texto, 240, 350, 0, "Aguarde");
-                        al_draw_text(fonte_inicio, cor_texto, 200, 430, 0, "voltando...");
-                        al_flip_display();
-                        entrada();
-                        return 0;
-
-                    default:
-                        break;
-                }
-            }
-        }
-    }
 
     void instrucoes(){
         al_clear_to_color(cor_background);
@@ -831,6 +821,130 @@ int main()
                         al_flip_display();
                         entrada();
                         return 0;
+
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+
+    void le_valor_forca(){
+        while(1) {
+            al_wait_for_event(event_queue, &ev);
+
+            if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
+                switch(ev.keyboard.keycode) {
+                    case ALLEGRO_KEY_1:
+                        valor_forca = 1;
+                        return 0;
+                        break;
+                    case ALLEGRO_KEY_2:
+                        valor_forca = 2;
+                        return 0;
+                        break;
+
+                    case ALLEGRO_KEY_3:
+                        valor_forca = 3;
+                        return 0;
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+
+    void jogar(){
+        al_clear_to_color(cor_background);
+        sharp();
+        al_flip_display();
+
+        while(1) {
+            al_wait_for_event(event_queue, &ev);
+
+            if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
+                switch(ev.keyboard.keycode) {
+                    case ALLEGRO_KEY_ESCAPE:
+                        printf("A tecla 'ESC' foi pressionada.\n");
+                        al_clear_to_color(cor_background);
+                        al_draw_text(fonte_inicio, cor_texto, 240, 350, 0, "Aguarde");
+                        al_draw_text(fonte_inicio, cor_texto, 200, 430, 0, "voltando...");
+                        al_flip_display();
+                        entrada();
+                        return 0;
+
+                    case ALLEGRO_KEY_1:
+                        le_valor_forca();
+                        //circ_sup_esq(valor_forca);
+                        rect_sup_esq(valor_forca);
+                        
+                        break;
+
+
+                    case ALLEGRO_KEY_2:
+                        le_valor_forca();
+                        //circ_sup_meio(valor_forca);
+                        rect_sup_meio(valor_forca);
+
+                        break;
+
+
+                    case ALLEGRO_KEY_3:
+                        le_valor_forca();
+                        //circ_sup_dir(valor_forca);
+                        rect_sup_dir(valor_forca);
+
+                        break;
+
+
+                    case ALLEGRO_KEY_4:
+                        le_valor_forca();
+                        //circ_meio_esq(valor_forca);
+                        rect_meio_esq(valor_forca);
+
+                        break;
+
+
+                    case ALLEGRO_KEY_5:
+                        le_valor_forca();
+                        //circ_meio_meio(valor_forca);
+                        rect_meio_meio(valor_forca);
+
+                        break;
+
+
+                    case ALLEGRO_KEY_6:
+                        le_valor_forca();
+                        //circ_meio_dir(valor_forca);
+                        rect_meio_dir(valor_forca);
+
+                        break;
+
+                    case ALLEGRO_KEY_7:
+                        le_valor_forca();
+                        //circ_inf_esq(valor_forca);
+                        rect_inf_esq(valor_forca);
+
+                        break;
+
+
+                    case ALLEGRO_KEY_8:
+                        le_valor_forca();
+                        //circ_inf_meio(valor_forca);
+                        rect_inf_meio(valor_forca);
+
+                        break;
+
+                        
+                    case ALLEGRO_KEY_9:
+                        le_valor_forca();
+                        //circ_inf_dir(valor_forca);
+                        rect_inf_dir(valor_forca);
+
+                        break;
+
 
                     default:
                         break;
