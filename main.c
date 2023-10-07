@@ -71,6 +71,7 @@ int main()
     int valor_forca = 1;
     int lugar_limpeza = 1;
     int contador = 0;
+    int circulos_um = 0;
  
     // Limpa a tela toda para a cor de fundo
     al_clear_to_color(cor_background);
@@ -856,6 +857,7 @@ int main()
         }
     }
 
+
     void jogar(){
         al_clear_to_color(cor_background);
         sharp();
@@ -880,6 +882,7 @@ int main()
                         if (contador % 2 == 0){
                             circ_sup_esq(valor_forca);
                             contador++;
+                          
                         } else if (contador % 2 == 1)
                         {
                             rect_sup_esq(valor_forca);
