@@ -72,6 +72,7 @@ int main()
     int lugar_limpeza = 1;
     int contador = 0;
     int circulos_um = 0;
+    int circulos_dois = 0;
  
     // Limpa a tela toda para a cor de fundo
     al_clear_to_color(cor_background);
@@ -880,9 +881,11 @@ int main()
                     case ALLEGRO_KEY_1:
                         le_valor_forca();
                         if (contador % 2 == 0){
-                            circ_sup_esq(valor_forca);
-                            contador++;
-                          
+                            if (valor_forca == 1 && circulos_um > 0){
+                                circ_sup_esq(valor_forca);
+                                contador++;
+                                circulos_um --;
+                            }
                         } else if (contador % 2 == 1)
                         {
                             rect_sup_esq(valor_forca);
