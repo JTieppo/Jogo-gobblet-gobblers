@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdbool.h>
-#include <unistd.h>
 
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
@@ -31,15 +30,13 @@ int main() {
 
     // verificadores, caso negativo o programa é encerrado pra evitar problemas
     printf("\nadicionar verificadores de inicio das fontes e desenhos\n");
-    if (!al_init())
-    {
+    if (!al_init()) {
         fprintf(stderr, "Falha ao inicializar o Allegro.\n");
         return -1;
     }
 
     display = al_create_display(850, 850);
-    if (!display)
-    {
+    if (!display) {
         fprintf(stderr, "Falha ao criar a janela.\n");
         return -1;
     }
@@ -70,8 +67,12 @@ int main() {
     int valor_forca = 1;
     int lugar_limpeza = 1;
     int contador = 0;
-    int circulos_um = 0;
-    int circulos_dois = 0;
+    int circulos_um = 2;
+    int circulos_dois = 2;
+    int circulos_tres = 2;
+    int retangulos_um = 2;
+    int retangulos_dois = 2;
+    int retangulos_tres = 2;
  
     // Limpa a tela toda para a cor de fundo
     al_clear_to_color(cor_background);
@@ -833,21 +834,41 @@ int main() {
                                 circ_sup_esq(valor_forca);
                                 contador ++;
                                 circulos_um --;
+                            } else if (valor_forca == 2 && circulos_dois > 0){
+                                circ_sup_esq(valor_forca);
+                                contador ++;
+                                circulos_dois --;
+                            } else if (valor_forca == 3 && circulos_tres > 0) {
+                                circ_sup_esq(valor_forca);
+                                contador ++;
+                                circulos_tres --;
                             } else {
-                                printf("indisponivel");
+                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida");
+                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 530, 0, "selecione o campo");
+                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 560, 0, "e o valor novamente");
                             }
-
                         } else if (contador % 2 == 1) {
-                            rect_sup_esq(valor_forca);
-                            contador++;
+                            if (valor_forca == 1 && retangulos_um > 0){
+                                rect_sup_esq(valor_forca);
+                                contador ++;
+                                retangulos_um --;
+                            } else if (valor_forca == 2 && retangulos_dois > 0){
+                                rect_sup_esq(valor_forca);
+                                contador ++;
+                                retangulos_dois --;
+                            } else if (valor_forca == 3 && retangulos_tres > 0) {
+                                rect_sup_esq(valor_forca);
+                                contador ++;
+                                retangulos_tres --;
+                            } else {
+                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida");
+                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 530, 0, "selecione o campo");
+                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 560, 0, "e o valor novamente");
+                            }
                         } else {
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
-
+                            printf("Erro no calculo de par e impar seção allegro_key_1");
                         }
                         break;
-
 
                     case ALLEGRO_KEY_2:
                         le_valor_forca();
@@ -858,9 +879,9 @@ int main() {
                             rect_sup_meio(valor_forca);
                             contador++;
                         } else {
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 560, 0, "e o valor novamente");
 
                         }
                         break;
@@ -875,9 +896,9 @@ int main() {
                             rect_sup_dir(valor_forca);
                             contador++;
                         } else {
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 560, 0, "e o valor novamente");
 
                         }
                         break;
@@ -892,10 +913,9 @@ int main() {
                             rect_meio_esq(valor_forca);
                             contador++;
                         } else {
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
-
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 560, 0, "e o valor novamente");
                         }
                         break;
 
@@ -909,9 +929,9 @@ int main() {
                             rect_meio_meio(valor_forca);
                             contador++;
                         } else {
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 560, 0, "e o valor novamente");
 
                         }
                         break;
@@ -926,9 +946,9 @@ int main() {
                             rect_meio_dir(valor_forca);
                             contador++;
                         } else {
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 560, 0, "e o valor novamente");
                         }
                         break;
 
@@ -941,9 +961,9 @@ int main() {
                             rect_inf_esq(valor_forca);
                             contador++;
                         } else {
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 560, 0, "e o valor novamente");
 
                         }
                         break;
@@ -958,9 +978,9 @@ int main() {
                             rect_inf_meio(valor_forca);
                             contador++;
                         } else {
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 560, 0, "e o valor novamente");
 
                         }
                         break;
@@ -975,14 +995,13 @@ int main() {
                             rect_inf_dir(valor_forca);
                             contador++;
                         } else {
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 500, 0, "opção invalida");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 530, 0, "selecione o campo");
-                            al_draw_text(fonte_inicio_menu_inferior, 10, 560, 0, "e o valor novamente");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 530, 0, "selecione o campo");
+                            al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 560, 0, "e o valor novamente");
 
                         }
                         break;
-
-
+                      
                     default:
                         break;
                 }
