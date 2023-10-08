@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <locale.h>
+#include <string.h>
 #include <stdbool.h>
 
 #include <allegro5/allegro.h>
@@ -68,12 +69,15 @@ int main() {
     int valor_forca = 1;
     int lugar_limpeza = 1;
     int contador = 0;
+
     int circulos_um = 2;
     int circulos_dois = 2;
     int circulos_tres = 2;
+
     int retangulos_um = 2;
     int retangulos_dois = 2;
     int retangulos_tres = 2;
+
     int valor_forca_espaco_um = 0;
     int valor_forca_espaco_dois = 0;
     int valor_forca_espaco_tres = 0;
@@ -83,6 +87,19 @@ int main() {
     int valor_forca_espaco_sete = 0;
     int valor_forca_espaco_oito = 0;
     int valor_forca_espaco_nove = 0;
+
+    int figura = 0;
+    int posicao = 0;
+    int posicao_um = 0;
+    int posicao_dois = 0;
+    int posicao_tres = 0;
+    int posicao_quatro = 0;
+    int posicao_cinco = 0;
+    int posicao_seis = 0;
+    int posicao_sete = 0;
+    int posicao_oito = 0;
+    int posicao_nove = 0;
+    
  
     // Limpa a tela toda para a cor de fundo
     al_clear_to_color(cor_background);
@@ -826,6 +843,126 @@ int main() {
         }
     }
 
+    void verifica_vitoria_dois(){
+        if (posicao_um == posicao_dois && posicao_dois == posicao_tres && posicao_um != 0 && posicao_dois != 0 && posicao_tres != 0) {
+            if (posicao_um == 1) {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "Jogador do circulo venceu!");
+            } else {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "jogador do retangulo venceu!");
+            }
+            return 0;
+        } else if (posicao_quatro == posicao_cinco && posicao_cinco == posicao_seis && posicao_quatro != 0 && posicao_cinco != 0 && posicao_seis != 0) {
+            if (posicao_um == 1) {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "Jogador do circulo venceu!");
+            } else {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "jogador do retangulo venceu!");
+            }
+            return 0;
+        } else if (posicao_sete == posicao_oito && posicao_oito == posicao_nove && posicao_sete != 0 && posicao_oito != 0 && posicao_nove != 0) {
+            if (posicao_um == 1) {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "Jogador do circulo venceu!");
+            } else {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "jogador do retangulo venceu!");
+            }
+            return 0;
+        } else if (posicao_um == posicao_cinco && posicao_cinco == posicao_nove && posicao_um != 0 && posicao_cinco != 0 && posicao_nove != 0) {
+            if (posicao_um == 1) {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "Jogador do circulo venceu!");
+            } else {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "jogador do retangulo venceu!");
+            }
+            return 0;
+        } else if (posicao_tres == posicao_cinco && posicao_cinco == posicao_sete && posicao_tres != 0 && posicao_cinco != 0 && posicao_sete != 0) {
+            if (posicao_um == 1) {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "Jogador do circulo venceu!");
+            } else {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "jogador do retangulo venceu!");
+            }
+            return 0;
+        } else if (posicao_um == posicao_quatro && posicao_quatro == posicao_sete && posicao_um != 0 && posicao_quatro != 0 && posicao_sete != 0) {
+            if (posicao_um == 1) {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "Jogador do circulo venceu!");
+            } else {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "jogador do retangulo venceu!");
+            }
+            return 0;
+        } else if (posicao_dois == posicao_cinco && posicao_cinco == posicao_oito && posicao_dois != 0 && posicao_cinco != 0 && posicao_oito != 0) {
+            if (posicao_um == 1) {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "Jogador do circulo venceu!");
+            } else {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "jogador do retangulo venceu!");
+            }
+            return 0;
+        } else if (posicao_tres == posicao_seis && posicao_seis == posicao_nove && posicao_tres != 0 && posicao_seis != 0 && posicao_nove != 0) {
+            if (posicao_um == 1) {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "Jogador do circulo venceu!");
+            } else {
+                al_draw_text(fonte, cor_texto, 400, 400, 0, "jogador do retangulo venceu!");
+            }
+            return 0;
+        }
+    }
+
+    void verifica_vitoria(posicao, figura) {
+        switch (posicao) {
+            case 1:
+                posicao_um = figura;
+                verifica_vitoria_dois();
+                return 0;
+                break;
+            
+            case 2:
+                posicao_dois = figura;
+                verifica_vitoria_dois();
+                return 0;
+                break;
+            
+            case 3:
+                posicao_tres = figura;
+                verifica_vitoria_dois();
+                return 0;
+                break;
+
+            case 4:
+                posicao_quatro = figura;
+                verifica_vitoria_dois();
+                return 0;
+                break;
+
+            case 5:
+                posicao_cinco = figura;
+                verifica_vitoria_dois();
+                return 0;
+                break;
+
+            case 6:
+                posicao_seis = figura;
+                verifica_vitoria_dois();
+                return 0;
+                break;
+
+            case 7:
+                posicao_sete = figura;
+                verifica_vitoria_dois();
+                return 0;
+                break;
+
+            case 8:
+                posicao_oito = figura;
+                verifica_vitoria_dois();
+                return 0;
+                break;
+
+            case 9:
+                posicao_nove = figura;
+                verifica_vitoria_dois();
+                return 0;
+                break;
+            
+            default:
+                break;
+        }
+    }
 
     void jogar() {
         al_clear_to_color(cor_background);
@@ -849,9 +986,11 @@ int main() {
                         lugar_limpeza = 1;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_um) {
-                            valor_forca_espaco_um = valor_forca;
-
                             if (valor_forca == 1 && circulos_um > 0){
+                                valor_forca_espaco_um = valor_forca;
+                                posicao = 1;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
                                 limpa(lugar_limpeza);
                                 circ_sup_esq(valor_forca);
                                 contador ++;
@@ -859,6 +998,10 @@ int main() {
                                 limpa_opcao_invalida();
 
                             } else if (valor_forca == 2 && circulos_dois > 0){
+                                valor_forca_espaco_um = valor_forca;
+                                posicao = 1;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
                                 limpa(lugar_limpeza);
                                 circ_sup_esq(valor_forca);
                                 contador ++;
@@ -866,6 +1009,10 @@ int main() {
                                 limpa_opcao_invalida();
 
                             } else if (valor_forca == 3 && circulos_tres > 0) {
+                                valor_forca_espaco_um = valor_forca;
+                                posicao = 1;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
                                 limpa(lugar_limpeza);
                                 circ_sup_esq(valor_forca);
                                 contador ++;
@@ -877,8 +1024,11 @@ int main() {
                             }
 
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_um) {
-                            valor_forca_espaco_um = valor_forca;
                             if (valor_forca == 1 && retangulos_um > 0){
+                                posicao = 1;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_esq(valor_forca);
                                 contador ++;
@@ -886,6 +1036,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && retangulos_dois > 0){
+                                posicao = 1;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_esq(valor_forca);
                                 contador ++;
@@ -893,6 +1047,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
+                                posicao = 1;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_esq(valor_forca);
                                 contador ++;
@@ -913,10 +1071,12 @@ int main() {
                     case ALLEGRO_KEY_2:
                         lugar_limpeza = 2;
                         le_valor_forca();
-                        if (contador % 2 == 0 && valor_forca > valor_forca_espaco_dois) {
-                            valor_forca_espaco_dois = valor_forca;
-                            
+                        if (contador % 2 == 0 && valor_forca > valor_forca_espaco_dois) { 
                             if (valor_forca == 1 && circulos_um > 0){
+                                posicao = 2;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_sup_meio(valor_forca);
                                 contador ++;
@@ -924,6 +1084,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && circulos_dois > 0){
+                                posicao = 2;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_sup_meio(valor_forca);
                                 contador ++;
@@ -931,6 +1095,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && circulos_tres > 0) {
+                                posicao = 2;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_sup_meio(valor_forca);
                                 contador ++;
@@ -942,9 +1110,11 @@ int main() {
                             }
                             
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_dois) {
-                            valor_forca_espaco_dois = valor_forca;
-                            
                             if (valor_forca == 1 && retangulos_um > 0){
+                                posicao = 2;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_meio(valor_forca);
                                 contador ++;
@@ -952,6 +1122,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && retangulos_dois > 0){
+                                posicao = 2;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_meio(valor_forca);
                                 contador ++;
@@ -959,6 +1133,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
+                                posicao = 2;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_meio(valor_forca);
                                 contador ++;
@@ -981,16 +1159,22 @@ int main() {
                         lugar_limpeza = 3;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_tres) {
-                            valor_forca_espaco_tres = valor_forca;
                             if (valor_forca == 1 && circulos_um > 0){
+                                posicao = 3;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
-                                
                                 circ_sup_dir(valor_forca);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && circulos_dois > 0){
+                                posicao = 3;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_sup_dir(valor_forca);
                                 contador ++;
@@ -998,6 +1182,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && circulos_tres > 0) {
+                                posicao = 3;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_sup_dir(valor_forca);
                                 contador ++;
@@ -1009,9 +1197,11 @@ int main() {
                             }
                             
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_tres) {
-                            valor_forca_espaco_tres = valor_forca;
-                            
                             if (valor_forca == 1 && retangulos_um > 0){
+                                posicao = 3;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_dir(valor_forca);
                                 contador ++;
@@ -1019,6 +1209,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && retangulos_dois > 0){
+                                posicao = 3;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_dir(valor_forca);
                                 contador ++;
@@ -1026,6 +1220,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
+                                posicao = 3;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_dir(valor_forca);
                                 contador ++;
@@ -1048,9 +1246,11 @@ int main() {
                         lugar_limpeza = 4;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_quatro) {
-                            valor_forca_espaco_quatro = valor_forca;
-                            
                             if (valor_forca == 1 && circulos_um > 0){
+                                posicao = 4;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_esq(valor_forca);
                                 contador ++;
@@ -1058,6 +1258,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && circulos_dois > 0){
+                                posicao = 4;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_esq(valor_forca);
                                 contador ++;
@@ -1065,6 +1269,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && circulos_tres > 0) {
+                                posicao = 4;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_esq(valor_forca);
                                 contador ++;
@@ -1076,9 +1284,11 @@ int main() {
                             }
                             
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_quatro) {
-                            valor_forca_espaco_quatro = valor_forca;
-                            
                             if (valor_forca == 1 && retangulos_um > 0){
+                                posicao = 4;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_esq(valor_forca);
                                 contador ++;
@@ -1086,6 +1296,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && retangulos_dois > 0){
+                                posicao = 4;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_esq(valor_forca);
                                 contador ++;
@@ -1093,6 +1307,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
+                                posicao = 4;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_esq(valor_forca);
                                 contador ++;
@@ -1115,9 +1333,11 @@ int main() {
                         lugar_limpeza = 5;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_cinco) {
-                            valor_forca_espaco_cinco = valor_forca;
-                            
                             if (valor_forca == 1 && circulos_um > 0){
+                                posicao = 5;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_meio(valor_forca);
                                 contador ++;
@@ -1125,6 +1345,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && circulos_dois > 0){
+                                posicao = 5;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_meio(valor_forca);
                                 contador ++;
@@ -1132,6 +1356,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && circulos_tres > 0) {
+                                posicao = 5;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_meio(valor_forca);
                                 contador ++;
@@ -1146,6 +1374,10 @@ int main() {
                             valor_forca_espaco_cinco = valor_forca;
                             
                             if (valor_forca == 1 && retangulos_um > 0){
+                                posicao = 5;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_meio(valor_forca);
                                 contador ++;
@@ -1153,6 +1385,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && retangulos_dois > 0){
+                                posicao = 5;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_meio(valor_forca);
                                 contador ++;
@@ -1160,6 +1396,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
+                                posicao = 5;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_meio(valor_forca);
                                 contador ++;
@@ -1182,9 +1422,11 @@ int main() {
                         lugar_limpeza = 6;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_seis) {
-                            valor_forca_espaco_seis = valor_forca;
-                            
                             if (valor_forca == 1 && circulos_um > 0){
+                                posicao = 6;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_dir(valor_forca);
                                 contador ++;
@@ -1192,6 +1434,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && circulos_dois > 0){
+                                posicao = 6;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_dir(valor_forca);
                                 contador ++;
@@ -1199,6 +1445,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && circulos_tres > 0) {
+                                posicao = 6;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_dir(valor_forca);
                                 contador ++;
@@ -1213,6 +1463,10 @@ int main() {
                             valor_forca_espaco_seis = valor_forca;
                             
                             if (valor_forca == 1 && retangulos_um > 0){
+                                posicao = 6;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_dir(valor_forca);
                                 contador ++;
@@ -1220,6 +1474,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && retangulos_dois > 0){
+                                posicao = 6;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_dir(valor_forca);
                                 contador ++;
@@ -1227,6 +1485,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
+                                posicao = 6;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_dir(valor_forca);
                                 contador ++;
@@ -1248,9 +1510,11 @@ int main() {
                         lugar_limpeza = 7;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_sete) {
-                            valor_forca_espaco_sete = valor_forca;
-                            
                             if (valor_forca == 1 && circulos_um > 0){
+                                posicao = 7;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_esq(valor_forca);
                                 contador ++;
@@ -1258,6 +1522,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && circulos_dois > 0){
+                                posicao = 7;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_esq(valor_forca);
                                 contador ++;
@@ -1265,6 +1533,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && circulos_tres > 0) {
+                                posicao = 7;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_esq(valor_forca);
                                 contador ++;
@@ -1279,6 +1551,10 @@ int main() {
                             valor_forca_espaco_sete = valor_forca;
                             
                             if (valor_forca == 1 && retangulos_um > 0){
+                                posicao = 7;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_esq(valor_forca);
                                 contador ++;
@@ -1286,6 +1562,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && retangulos_dois > 0){
+                                posicao = 7;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_esq(valor_forca);
                                 contador ++;
@@ -1293,6 +1573,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
+                                posicao = 7;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_esq(valor_forca);
                                 contador ++;
@@ -1315,9 +1599,11 @@ int main() {
                         lugar_limpeza = 8;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_oito) {
-                            valor_forca_espaco_oito = valor_forca;
-                            
                             if (valor_forca == 1 && circulos_um > 0){
+                                posicao = 8;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_meio(valor_forca);
                                 contador ++;
@@ -1325,6 +1611,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && circulos_dois > 0){
+                                posicao = 8;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_meio(valor_forca);
                                 contador ++;
@@ -1332,6 +1622,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && circulos_tres > 0) {
+                                posicao = 8;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_meio(valor_forca);
                                 contador ++;
@@ -1346,6 +1640,10 @@ int main() {
                             valor_forca_espaco_oito = valor_forca;
                             
                             if (valor_forca == 1 && retangulos_um > 0){
+                                posicao = 8;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_meio(valor_forca);
                                 contador ++;
@@ -1353,6 +1651,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && retangulos_dois > 0){
+                                posicao = 8;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_meio(valor_forca);
                                 contador ++;
@@ -1360,6 +1662,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
+                                posicao = 8;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_meio(valor_forca);
                                 contador ++;
@@ -1382,9 +1688,11 @@ int main() {
                         lugar_limpeza = 9;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_nove) {
-                            valor_forca_espaco_nove = valor_forca;
-                            
                             if (valor_forca == 1 && circulos_um > 0){
+                                posicao = 9;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_dir(valor_forca);
                                 contador ++;
@@ -1392,6 +1700,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && circulos_dois > 0){
+                                posicao = 9;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_dir(valor_forca);
                                 contador ++;
@@ -1399,6 +1711,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && circulos_tres > 0) {
+                                posicao = 9;
+                                figura = 1;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_dir(valor_forca);
                                 contador ++;
@@ -1413,6 +1729,10 @@ int main() {
                             valor_forca_espaco_nove = valor_forca;
                             
                             if (valor_forca == 1 && retangulos_um > 0){
+                                posicao = 9;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_dir(valor_forca);
                                 contador ++;
@@ -1420,6 +1740,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 2 && retangulos_dois > 0){
+                                posicao = 9;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_dir(valor_forca);
                                 contador ++;
@@ -1427,6 +1751,10 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
+                                posicao = 9;
+                                figura = 2;
+                                verifica_vitoria(posicao, figura);
+                                valor_forca_espaco_um = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_dir(valor_forca);
                                 contador ++;
