@@ -75,3 +75,9 @@ VERSÃO 3.2:
 
 VERSÃO 3.3:
     Implementa uma verificação de vencedor, um placar, score e se necessário correção de erros.
+    - Ajustar uma tela de vencedor (talvez uma boa opção seja substituir a guia superior de numeros pelo vencedor para que nao
+        suma o tabuleiro quando o jogo terminar)
+
+    - Adicionar leitura de iniciais 
+    - corrigir posição dos numeros das figuras e guia superior 
+    - adicionar linha ao conjunto vencedor 
