@@ -854,56 +854,63 @@ int main() {
 
     void verifica_vitoria_dois(){
         if (posicao_um == posicao_dois && posicao_dois == posicao_tres && posicao_um != 0 && posicao_dois != 0 && posicao_tres != 0) {
-            if (posicao_um == 1) {
+            if (posicao_um == 1 && posicao_dois == 1 && posicao_tres == 1) {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "Jogador do circulo venceu!");
             } else {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "jogador do retangulo venceu!");
             }
             return 0;
+
         } else if (posicao_quatro == posicao_cinco && posicao_cinco == posicao_seis && posicao_quatro != 0 && posicao_cinco != 0 && posicao_seis != 0) {
-            if (posicao_um == 1) {
+            if (posicao_quatro == 1 && posicao_cinco == 1 && posicao_seis == 1) {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "Jogador do circulo venceu!");
             } else {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "jogador do retangulo venceu!");
             }
             return 0;
+
         } else if (posicao_sete == posicao_oito && posicao_oito == posicao_nove && posicao_sete != 0 && posicao_oito != 0 && posicao_nove != 0) {
-            if (posicao_um == 1) {
+            if (posicao_sete == 1 && posicao_oito == 1 && posicao_nove == 1) {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "Jogador do circulo venceu!");
             } else {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "jogador do retangulo venceu!");
             }
             return 0;
+
         } else if (posicao_um == posicao_cinco && posicao_cinco == posicao_nove && posicao_um != 0 && posicao_cinco != 0 && posicao_nove != 0) {
-            if (posicao_um == 1) {
+            if (posicao_um == 1 && posicao_cinco == 1 && posicao_nove == 1) {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "Jogador do circulo venceu!");
             } else {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "jogador do retangulo venceu!");
             }
             return 0;
+
         } else if (posicao_tres == posicao_cinco && posicao_cinco == posicao_sete && posicao_tres != 0 && posicao_cinco != 0 && posicao_sete != 0) {
-            if (posicao_um == 1) {
+            if (posicao_tres == 1 && posicao_cinco == 1 && posicao_sete == 1) {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "Jogador do circulo venceu!");
             } else {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "jogador do retangulo venceu!");
             }
             return 0;
+
         } else if (posicao_um == posicao_quatro && posicao_quatro == posicao_sete && posicao_um != 0 && posicao_quatro != 0 && posicao_sete != 0) {
-            if (posicao_um == 1) {
+            if (posicao_um == 1 && posicao_quatro == 1 && posicao_sete == 1) {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "Jogador do circulo venceu!");
             } else {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "jogador do retangulo venceu!");
             }
             return 0;
+
         } else if (posicao_dois == posicao_cinco && posicao_cinco == posicao_oito && posicao_dois != 0 && posicao_cinco != 0 && posicao_oito != 0) {
-            if (posicao_um == 1) {
+            if (posicao_dois == 1 && posicao_cinco == 1 && posicao_oito == 1) {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "Jogador do circulo venceu!");
             } else {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "jogador do retangulo venceu!");
             }
             return 0;
+
         } else if (posicao_tres == posicao_seis && posicao_seis == posicao_nove && posicao_tres != 0 && posicao_seis != 0 && posicao_nove != 0) {
-            if (posicao_um == 1) {
+            if (posicao_tres == 1 && posicao_seis == 1 && posicao_nove == 1) {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "Jogador do circulo venceu!");
             } else {
                 al_draw_text(fonte, cor_texto, 5, 750, 0, "jogador do retangulo venceu!");
@@ -979,6 +986,11 @@ int main() {
         al_flip_display();
 
         while(1) {
+            if (circulos_um == 0 && circulos_dois == 0 && circulos_tres == 0 && retangulos_um == 0 && retangulos_dois == 0 && retangulos_tres == 0) {
+                al_draw_filled_rectangle(1, 1, 849, 195, cor_background);
+                al_draw_text(fonte, cor_texto, 110, 70, 0, "Acabaram as peças");
+            }
+            al_flip_display();
             al_wait_for_event(event_queue, &ev);
             if(ev.type == ALLEGRO_EVENT_KEY_DOWN) {
                 switch(ev.keyboard.keycode) {
