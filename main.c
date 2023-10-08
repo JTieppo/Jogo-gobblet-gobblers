@@ -846,31 +846,36 @@ int main() {
                         return 0;
 
                     case ALLEGRO_KEY_1:
-                    lugar_limpeza = 1;
+                        lugar_limpeza = 1;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_um) {
                             valor_forca_espaco_um = valor_forca;
+
                             if (valor_forca == 1 && circulos_um > 0){
                                 limpa(lugar_limpeza);
                                 circ_sup_esq(valor_forca);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
+
                             } else if (valor_forca == 2 && circulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 circ_sup_esq(valor_forca);
                                 contador ++;
                                 circulos_dois --;
                                 limpa_opcao_invalida();
+
                             } else if (valor_forca == 3 && circulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 circ_sup_esq(valor_forca);
                                 contador ++;
                                 circulos_tres --;
                                 limpa_opcao_invalida();
+
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_um) {
                             valor_forca_espaco_um = valor_forca;
                             if (valor_forca == 1 && retangulos_um > 0){
@@ -879,21 +884,25 @@ int main() {
                                 contador ++;
                                 retangulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && retangulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 rect_sup_esq(valor_forca);
                                 contador ++;
                                 retangulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 rect_sup_esq(valor_forca);
                                 contador ++;
                                 retangulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else {
                             printf("Possivel erro no calculo de par e impar seção allegro_key_1");
                             al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
@@ -902,54 +911,64 @@ int main() {
                         break;
 
                     case ALLEGRO_KEY_2:
-                    lugar_limpeza = 2;
+                        lugar_limpeza = 2;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_dois) {
                             valor_forca_espaco_dois = valor_forca;
+                            
                             if (valor_forca == 1 && circulos_um > 0){
                                 limpa(lugar_limpeza);
                                 circ_sup_meio(valor_forca);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && circulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 circ_sup_meio(valor_forca);
                                 contador ++;
                                 circulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && circulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 circ_sup_meio(valor_forca);
                                 contador ++;
                                 circulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_dois) {
                             valor_forca_espaco_dois = valor_forca;
+                            
                             if (valor_forca == 1 && retangulos_um > 0){
                                 limpa(lugar_limpeza);
                                 rect_sup_meio(valor_forca);
                                 contador ++;
                                 retangulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && retangulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 rect_sup_meio(valor_forca);
                                 contador ++;
                                 retangulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 rect_sup_meio(valor_forca);
                                 contador ++;
                                 retangulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else {
                             printf("Possivel erro no calculo de par e impar seção allegro_key_2");
                             al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
@@ -959,54 +978,64 @@ int main() {
 
 
                     case ALLEGRO_KEY_3:
-                    lugar_limpeza = 3;
+                        lugar_limpeza = 3;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_tres) {
                             valor_forca_espaco_tres = valor_forca;
                             if (valor_forca == 1 && circulos_um > 0){
                                 limpa(lugar_limpeza);
+                                
                                 circ_sup_dir(valor_forca);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && circulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 circ_sup_dir(valor_forca);
                                 contador ++;
                                 circulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && circulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 circ_sup_dir(valor_forca);
                                 contador ++;
                                 circulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_tres) {
                             valor_forca_espaco_tres = valor_forca;
+                            
                             if (valor_forca == 1 && retangulos_um > 0){
                                 limpa(lugar_limpeza);
                                 rect_sup_dir(valor_forca);
                                 contador ++;
                                 retangulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && retangulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 rect_sup_dir(valor_forca);
                                 contador ++;
                                 retangulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 rect_sup_dir(valor_forca);
                                 contador ++;
                                 retangulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else {
                             printf("Possivel erro no calculo de par e impar seção allegro_key_3");
                             al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
@@ -1016,54 +1045,64 @@ int main() {
 
 
                     case ALLEGRO_KEY_4:
-                    lugar_limpeza = 4;
+                        lugar_limpeza = 4;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_quatro) {
                             valor_forca_espaco_quatro = valor_forca;
+                            
                             if (valor_forca == 1 && circulos_um > 0){
                                 limpa(lugar_limpeza);
                                 circ_meio_esq(valor_forca);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && circulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 circ_meio_esq(valor_forca);
                                 contador ++;
                                 circulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && circulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 circ_meio_esq(valor_forca);
                                 contador ++;
                                 circulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_quatro) {
                             valor_forca_espaco_quatro = valor_forca;
+                            
                             if (valor_forca == 1 && retangulos_um > 0){
                                 limpa(lugar_limpeza);
                                 rect_meio_esq(valor_forca);
                                 contador ++;
                                 retangulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && retangulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 rect_meio_esq(valor_forca);
                                 contador ++;
                                 retangulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 rect_meio_esq(valor_forca);
                                 contador ++;
                                 retangulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else {
                             printf("Possivel erro no calculo de par e impar seção allegro_key_4");
                             al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
@@ -1073,54 +1112,64 @@ int main() {
 
 
                     case ALLEGRO_KEY_5:
-                    lugar_limpeza = 5;
+                        lugar_limpeza = 5;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_cinco) {
                             valor_forca_espaco_cinco = valor_forca;
+                            
                             if (valor_forca == 1 && circulos_um > 0){
                                 limpa(lugar_limpeza);
                                 circ_meio_meio(valor_forca);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && circulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 circ_meio_meio(valor_forca);
                                 contador ++;
                                 circulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && circulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 circ_meio_meio(valor_forca);
                                 contador ++;
                                 circulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_cinco) {
                             valor_forca_espaco_cinco = valor_forca;
+                            
                             if (valor_forca == 1 && retangulos_um > 0){
                                 limpa(lugar_limpeza);
                                 rect_meio_meio(valor_forca);
                                 contador ++;
                                 retangulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && retangulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 rect_meio_meio(valor_forca);
                                 contador ++;
                                 retangulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 rect_meio_meio(valor_forca);
                                 contador ++;
                                 retangulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else {
                             printf("Possivel erro no calculo de par e impar seção allegro_key_5");
                             al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
@@ -1130,54 +1179,64 @@ int main() {
 
 
                     case ALLEGRO_KEY_6:
-                    lugar_limpeza = 6;
+                        lugar_limpeza = 6;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_seis) {
                             valor_forca_espaco_seis = valor_forca;
+                            
                             if (valor_forca == 1 && circulos_um > 0){
                                 limpa(lugar_limpeza);
                                 circ_meio_dir(valor_forca);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && circulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 circ_meio_dir(valor_forca);
                                 contador ++;
                                 circulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && circulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 circ_meio_dir(valor_forca);
                                 contador ++;
                                 circulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_seis) {
                             valor_forca_espaco_seis = valor_forca;
+                            
                             if (valor_forca == 1 && retangulos_um > 0){
                                 limpa(lugar_limpeza);
                                 rect_meio_dir(valor_forca);
                                 contador ++;
                                 retangulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && retangulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 rect_meio_dir(valor_forca);
                                 contador ++;
                                 retangulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 rect_meio_dir(valor_forca);
                                 contador ++;
                                 retangulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else {
                             printf("Possivel erro no calculo de par e impar seção allegro_key_6");
                             al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
@@ -1186,54 +1245,64 @@ int main() {
                         break;
 
                     case ALLEGRO_KEY_7:
-                    lugar_limpeza = 7;
+                        lugar_limpeza = 7;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_sete) {
                             valor_forca_espaco_sete = valor_forca;
+                            
                             if (valor_forca == 1 && circulos_um > 0){
                                 limpa(lugar_limpeza);
                                 circ_inf_esq(valor_forca);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && circulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 circ_inf_esq(valor_forca);
                                 contador ++;
                                 circulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && circulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 circ_inf_esq(valor_forca);
                                 contador ++;
                                 circulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_sete) {
                             valor_forca_espaco_sete = valor_forca;
+                            
                             if (valor_forca == 1 && retangulos_um > 0){
                                 limpa(lugar_limpeza);
                                 rect_inf_esq(valor_forca);
                                 contador ++;
                                 retangulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && retangulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 rect_inf_esq(valor_forca);
                                 contador ++;
                                 retangulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 rect_inf_esq(valor_forca);
                                 contador ++;
                                 retangulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else {
                             printf("Possivel erro no calculo de par e impar seção allegro_key_7");
                             al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
@@ -1243,54 +1312,64 @@ int main() {
 
 
                     case ALLEGRO_KEY_8:
-                    lugar_limpeza = 8;
+                        lugar_limpeza = 8;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_oito) {
                             valor_forca_espaco_oito = valor_forca;
+                            
                             if (valor_forca == 1 && circulos_um > 0){
                                 limpa(lugar_limpeza);
                                 circ_inf_meio(valor_forca);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && circulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 circ_inf_meio(valor_forca);
                                 contador ++;
                                 circulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && circulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 circ_inf_meio(valor_forca);
                                 contador ++;
                                 circulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_oito) {
                             valor_forca_espaco_oito = valor_forca;
+                            
                             if (valor_forca == 1 && retangulos_um > 0){
                                 limpa(lugar_limpeza);
                                 rect_inf_meio(valor_forca);
                                 contador ++;
                                 retangulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && retangulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 rect_inf_meio(valor_forca);
                                 contador ++;
                                 retangulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 rect_inf_meio(valor_forca);
                                 contador ++;
                                 retangulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else {
                             printf("Possivel erro no calculo de par e impar seção allegro_key_8");
                             al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
@@ -1300,54 +1379,64 @@ int main() {
 
                         
                     case ALLEGRO_KEY_9:
-                    lugar_limpeza = 9;
+                        lugar_limpeza = 9;
                         le_valor_forca();
                         if (contador % 2 == 0 && valor_forca > valor_forca_espaco_nove) {
                             valor_forca_espaco_nove = valor_forca;
+                            
                             if (valor_forca == 1 && circulos_um > 0){
                                 limpa(lugar_limpeza);
                                 circ_inf_dir(valor_forca);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && circulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 circ_inf_dir(valor_forca);
                                 contador ++;
                                 circulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && circulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 circ_inf_dir(valor_forca);
                                 contador ++;
                                 circulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_nove) {
                             valor_forca_espaco_nove = valor_forca;
+                            
                             if (valor_forca == 1 && retangulos_um > 0){
                                 limpa(lugar_limpeza);
                                 rect_inf_dir(valor_forca);
                                 contador ++;
                                 retangulos_um --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 2 && retangulos_dois > 0){
                                 limpa(lugar_limpeza);
                                 rect_inf_dir(valor_forca);
                                 contador ++;
                                 retangulos_dois --;
                                 limpa_opcao_invalida();
+                                
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
                                 limpa(lugar_limpeza);
                                 rect_inf_dir(valor_forca);
                                 contador ++;
                                 retangulos_tres --;
                                 limpa_opcao_invalida();
+                                
                             } else {
                                 al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida, tente outra força");
                             }
+                            
                         } else {
                             printf("Possivel erro no calculo de par e impar: allegro_key_9");
                             al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
