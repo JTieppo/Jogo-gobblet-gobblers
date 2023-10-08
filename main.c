@@ -176,7 +176,7 @@ int main() {
         al_flip_display();
 
         al_rest(0.4);
-        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 360, 470, 0, "1 -     Jogar");
+        al_draw_text(fonte_inicio_menu_inferior, cor_texto, 360, 470, 0, "1  -     Jogar");
         al_flip_display();
         al_rest(0.2);
         al_draw_text(fonte_inicio_menu_inferior, cor_texto, 360, 500, 0, "2 -    Instruções");
@@ -203,9 +203,9 @@ int main() {
         al_draw_text(fonte, cor_texto, 360, 50, 0, "4");
         al_draw_text(fonte, cor_texto, 410, 50, 0, "5");
         al_draw_text(fonte, cor_texto, 460, 50, 0, "6");
-        al_draw_text(fonte, cor_texto, 360, 100, 0, "7");
-        al_draw_text(fonte, cor_texto, 410, 100, 0, "8");
-        al_draw_text(fonte, cor_texto, 460, 100, 0, "9");
+        al_draw_text(fonte, cor_texto, 360, 95, 0, "7");
+        al_draw_text(fonte, cor_texto, 410, 95, 0, "8");
+        al_draw_text(fonte, cor_texto, 460, 95, 0, "9");
         al_draw_text(fonte_inicio_menu_inferior, cor_texto, 270, 170, 0, "Digite a posição e o número da peça");
         al_flip_display();
     }
@@ -999,10 +999,10 @@ int main() {
                                 valor_forca_espaco_um = valor_forca;
                                 posicao = 1;
                                 figura = 1;
-                                verifica_vitoria(posicao, figura);
                                 limpa(lugar_limpeza);
                                 circ_sup_esq(valor_forca);
                                 contador ++;
+                                verifica_vitoria(posicao, figura);
                                 circulos_um --;
                                 limpa_opcao_invalida();
 
@@ -1522,10 +1522,10 @@ int main() {
                             if (valor_forca == 1 && circulos_um > 0){
                                 posicao = 7;
                                 figura = 1;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_sete = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_esq(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
@@ -1533,10 +1533,10 @@ int main() {
                             } else if (valor_forca == 2 && circulos_dois > 0){
                                 posicao = 7;
                                 figura = 1;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_sete = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_esq(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 circulos_dois --;
                                 limpa_opcao_invalida();
@@ -1544,10 +1544,10 @@ int main() {
                             } else if (valor_forca == 3 && circulos_tres > 0) {
                                 posicao = 7;
                                 figura = 1;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_sete = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_esq(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 circulos_tres --;
                                 limpa_opcao_invalida();
@@ -1562,10 +1562,10 @@ int main() {
                             if (valor_forca == 1 && retangulos_um > 0){
                                 posicao = 7;
                                 figura = 2;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_sete = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_esq(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 retangulos_um --;
                                 limpa_opcao_invalida();
@@ -1573,10 +1573,10 @@ int main() {
                             } else if (valor_forca == 2 && retangulos_dois > 0){
                                 posicao = 7;
                                 figura = 2;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_sete = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_esq(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 retangulos_dois --;
                                 limpa_opcao_invalida();
@@ -1584,10 +1584,10 @@ int main() {
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
                                 posicao = 7;
                                 figura = 2;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_sete = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_esq(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 retangulos_tres --;
                                 limpa_opcao_invalida();
@@ -1611,10 +1611,10 @@ int main() {
                             if (valor_forca == 1 && circulos_um > 0){
                                 posicao = 8;
                                 figura = 1;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_oito = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_meio(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
@@ -1622,10 +1622,10 @@ int main() {
                             } else if (valor_forca == 2 && circulos_dois > 0){
                                 posicao = 8;
                                 figura = 1;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_oito = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_meio(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 circulos_dois --;
                                 limpa_opcao_invalida();
@@ -1633,10 +1633,10 @@ int main() {
                             } else if (valor_forca == 3 && circulos_tres > 0) {
                                 posicao = 8;
                                 figura = 1;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_oito = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_meio(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 circulos_tres --;
                                 limpa_opcao_invalida();
@@ -1651,10 +1651,10 @@ int main() {
                             if (valor_forca == 1 && retangulos_um > 0){
                                 posicao = 8;
                                 figura = 2;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_oito = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_meio(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 retangulos_um --;
                                 limpa_opcao_invalida();
@@ -1662,10 +1662,10 @@ int main() {
                             } else if (valor_forca == 2 && retangulos_dois > 0){
                                 posicao = 8;
                                 figura = 2;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_oito = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_meio(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 retangulos_dois --;
                                 limpa_opcao_invalida();
@@ -1673,10 +1673,10 @@ int main() {
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
                                 posicao = 8;
                                 figura = 2;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_oito = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_meio(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 retangulos_tres --;
                                 limpa_opcao_invalida();
@@ -1700,10 +1700,10 @@ int main() {
                             if (valor_forca == 1 && circulos_um > 0){
                                 posicao = 9;
                                 figura = 1;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_nove = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_dir(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 circulos_um --;
                                 limpa_opcao_invalida();
@@ -1711,10 +1711,10 @@ int main() {
                             } else if (valor_forca == 2 && circulos_dois > 0){
                                 posicao = 9;
                                 figura = 1;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_nove = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_dir(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 circulos_dois --;
                                 limpa_opcao_invalida();
@@ -1722,10 +1722,10 @@ int main() {
                             } else if (valor_forca == 3 && circulos_tres > 0) {
                                 posicao = 9;
                                 figura = 1;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_nove = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_dir(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 circulos_tres --;
                                 limpa_opcao_invalida();
@@ -1740,10 +1740,10 @@ int main() {
                             if (valor_forca == 1 && retangulos_um > 0){
                                 posicao = 9;
                                 figura = 2;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_nove = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_dir(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 retangulos_um --;
                                 limpa_opcao_invalida();
@@ -1751,10 +1751,10 @@ int main() {
                             } else if (valor_forca == 2 && retangulos_dois > 0){
                                 posicao = 9;
                                 figura = 2;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_nove = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_dir(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 retangulos_dois --;
                                 limpa_opcao_invalida();
@@ -1762,10 +1762,10 @@ int main() {
                             } else if (valor_forca == 3 && retangulos_tres > 0) {
                                 posicao = 9;
                                 figura = 2;
-                                verifica_vitoria(posicao, figura);
                                 valor_forca_espaco_nove = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_dir(valor_forca);
+                                verifica_vitoria(posicao, figura);
                                 contador ++;
                                 retangulos_tres --;
                                 limpa_opcao_invalida();
