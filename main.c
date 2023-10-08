@@ -6,6 +6,8 @@
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_audio.h>
+#include <allegro5/allegro_acodec.h>
 
 int main() {
     setlocale(LC_ALL, "Portuguese");
@@ -23,9 +25,13 @@ int main() {
     al_init_primitives_addon(); // contem draw circle e rectangle
     al_init_ttf_addon();        // contem load do ttf pras fontes
     al_init_font_addon();       // contm a biblioteca de escrita pra fonte
+    al_install_audio();
+    al_init_acodec_addon();
+    al_reserve_samples(1);
 
     // cria ponteiro para uma janela e eventos(display)
     ALLEGRO_DISPLAY *display = NULL;
+    ALLEGRO_SAMPLE *sample = NULL;
     ALLEGRO_EVENT_QUEUE *event_queue = NULL;
     ALLEGRO_EVENT ev;
 
@@ -61,6 +67,9 @@ int main() {
     ALLEGRO_FONT *fonte_creditos_instrucoes = al_load_font("./assets/Pixelify.ttf", 35, 0);
     ALLEGRO_FONT *fonte_inicio_menu_inferior = al_load_font("./assets/Pixelify.ttf", 20, 0);
 
+    // Implementos de audio
+    sample = al_load_sample("assets/Reprise - Class Act - ANBR Adrian Berenguer.ogg");
+    al_play_sample(sample, 1.0, 0.0,1.0,ALLEGRO_PLAYMODE_LOOP, NULL);
 
     // Define caracteristicas
     int espessura_sharp = 5;
