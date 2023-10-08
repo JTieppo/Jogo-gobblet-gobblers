@@ -1085,7 +1085,7 @@ int main() {
                                 posicao = 2;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_dois = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_sup_meio(valor_forca);
                                 contador ++;
@@ -1096,7 +1096,7 @@ int main() {
                                 posicao = 2;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_dois = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_sup_meio(valor_forca);
                                 contador ++;
@@ -1107,7 +1107,7 @@ int main() {
                                 posicao = 2;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_dois = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_sup_meio(valor_forca);
                                 contador ++;
@@ -1123,7 +1123,7 @@ int main() {
                                 posicao = 2;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_dois = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_meio(valor_forca);
                                 contador ++;
@@ -1134,7 +1134,7 @@ int main() {
                                 posicao = 2;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_dois = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_meio(valor_forca);
                                 contador ++;
@@ -1145,7 +1145,7 @@ int main() {
                                 posicao = 2;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_dois = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_meio(valor_forca);
                                 contador ++;
@@ -1172,7 +1172,7 @@ int main() {
                                 posicao = 3;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_tres = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_sup_dir(valor_forca);
                                 contador ++;
@@ -1183,7 +1183,7 @@ int main() {
                                 posicao = 3;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_tres = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_sup_dir(valor_forca);
                                 contador ++;
@@ -1194,7 +1194,7 @@ int main() {
                                 posicao = 3;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_tres = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_sup_dir(valor_forca);
                                 contador ++;
@@ -1210,7 +1210,7 @@ int main() {
                                 posicao = 3;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_tres = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_dir(valor_forca);
                                 contador ++;
@@ -1221,7 +1221,7 @@ int main() {
                                 posicao = 3;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_tres = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_dir(valor_forca);
                                 contador ++;
@@ -1232,7 +1232,7 @@ int main() {
                                 posicao = 3;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_tres = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_sup_dir(valor_forca);
                                 contador ++;
@@ -1259,7 +1259,7 @@ int main() {
                                 posicao = 4;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_quatro = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_esq(valor_forca);
                                 contador ++;
@@ -1270,7 +1270,7 @@ int main() {
                                 posicao = 4;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_quatro = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_esq(valor_forca);
                                 contador ++;
@@ -1281,7 +1281,7 @@ int main() {
                                 posicao = 4;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_quatro = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_esq(valor_forca);
                                 contador ++;
@@ -1297,7 +1297,7 @@ int main() {
                                 posicao = 4;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_quatro = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_esq(valor_forca);
                                 contador ++;
@@ -1308,7 +1308,7 @@ int main() {
                                 posicao = 4;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_quatro = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_esq(valor_forca);
                                 contador ++;
@@ -1319,7 +1319,7 @@ int main() {
                                 posicao = 4;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_quatro = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_esq(valor_forca);
                                 contador ++;
@@ -1346,7 +1346,7 @@ int main() {
                                 posicao = 5;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_cinco = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_meio(valor_forca);
                                 contador ++;
@@ -1357,7 +1357,7 @@ int main() {
                                 posicao = 5;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_cinco = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_meio(valor_forca);
                                 contador ++;
@@ -1368,7 +1368,7 @@ int main() {
                                 posicao = 5;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_cinco = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_meio(valor_forca);
                                 contador ++;
@@ -1397,7 +1397,7 @@ int main() {
                                 posicao = 5;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_cinco = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_meio(valor_forca);
                                 contador ++;
@@ -1408,7 +1408,7 @@ int main() {
                                 posicao = 5;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_cinco = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_meio(valor_forca);
                                 contador ++;
@@ -1435,7 +1435,7 @@ int main() {
                                 posicao = 6;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_seis = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_dir(valor_forca);
                                 contador ++;
@@ -1446,7 +1446,7 @@ int main() {
                                 posicao = 6;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_seis = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_dir(valor_forca);
                                 contador ++;
@@ -1457,7 +1457,7 @@ int main() {
                                 posicao = 6;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_seis = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_meio_dir(valor_forca);
                                 contador ++;
@@ -1486,7 +1486,7 @@ int main() {
                                 posicao = 6;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_seis = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_dir(valor_forca);
                                 contador ++;
@@ -1497,7 +1497,7 @@ int main() {
                                 posicao = 6;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_seis = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_meio_dir(valor_forca);
                                 contador ++;
@@ -1523,7 +1523,7 @@ int main() {
                                 posicao = 7;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_sete = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_esq(valor_forca);
                                 contador ++;
@@ -1534,7 +1534,7 @@ int main() {
                                 posicao = 7;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_sete = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_esq(valor_forca);
                                 contador ++;
@@ -1545,7 +1545,7 @@ int main() {
                                 posicao = 7;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_sete = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_esq(valor_forca);
                                 contador ++;
@@ -1563,7 +1563,7 @@ int main() {
                                 posicao = 7;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_sete = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_esq(valor_forca);
                                 contador ++;
@@ -1574,7 +1574,7 @@ int main() {
                                 posicao = 7;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_sete = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_esq(valor_forca);
                                 contador ++;
@@ -1585,7 +1585,7 @@ int main() {
                                 posicao = 7;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_sete = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_esq(valor_forca);
                                 contador ++;
@@ -1612,7 +1612,7 @@ int main() {
                                 posicao = 8;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_oito = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_meio(valor_forca);
                                 contador ++;
@@ -1623,7 +1623,7 @@ int main() {
                                 posicao = 8;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_oito = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_meio(valor_forca);
                                 contador ++;
@@ -1634,7 +1634,7 @@ int main() {
                                 posicao = 8;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_oito = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_meio(valor_forca);
                                 contador ++;
@@ -1652,7 +1652,7 @@ int main() {
                                 posicao = 8;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_oito = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_meio(valor_forca);
                                 contador ++;
@@ -1663,7 +1663,7 @@ int main() {
                                 posicao = 8;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_oito = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_meio(valor_forca);
                                 contador ++;
@@ -1674,7 +1674,7 @@ int main() {
                                 posicao = 8;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_oito = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_meio(valor_forca);
                                 contador ++;
@@ -1701,7 +1701,7 @@ int main() {
                                 posicao = 9;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_nove = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_dir(valor_forca);
                                 contador ++;
@@ -1712,7 +1712,7 @@ int main() {
                                 posicao = 9;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_nove = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_dir(valor_forca);
                                 contador ++;
@@ -1723,7 +1723,7 @@ int main() {
                                 posicao = 9;
                                 figura = 1;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_nove = valor_forca;
                                 limpa(lugar_limpeza);
                                 circ_inf_dir(valor_forca);
                                 contador ++;
@@ -1741,7 +1741,7 @@ int main() {
                                 posicao = 9;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_nove = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_dir(valor_forca);
                                 contador ++;
@@ -1752,7 +1752,7 @@ int main() {
                                 posicao = 9;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_nove = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_dir(valor_forca);
                                 contador ++;
@@ -1763,7 +1763,7 @@ int main() {
                                 posicao = 9;
                                 figura = 2;
                                 verifica_vitoria(posicao, figura);
-                                valor_forca_espaco_um = valor_forca;
+                                valor_forca_espaco_nove = valor_forca;
                                 limpa(lugar_limpeza);
                                 rect_inf_dir(valor_forca);
                                 contador ++;
