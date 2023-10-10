@@ -96,4 +96,6 @@ O que necessita de mudança?
     - As cores devem permanecer essas ou mudar?
     - A música continua essa? parece ser enjoativa
     - A fonte deve ser mudada ou continua retrô?
+    - Ver se tem algo torto
+    - Alguma mudança de design?
 
