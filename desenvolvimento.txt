@@ -93,4 +93,6 @@ O que necessita de mudança?
     - Adicionar em algum lugar(acho que acima) as figuras que podem e já foram utilizadas
     - Implementar dentro do tabuleiro valores dos campos de 1 a 9 com cor de baixa luminosidade para facilitar jogabilidade
     - As cores devem permanecer essas ou mudar?
-    - 
+    - A música continua essa? parece ser enjoativa
+    - A fonte deve ser mudada ou continua retrô?
+    
