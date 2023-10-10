@@ -81,3 +81,16 @@ VERSÃO 3.3:
     - Adicionar leitura de iniciais 
     - corrigir posição dos numeros das figuras e guia superior 
     - adicionar linha ao conjunto vencedor 
+
+versão 3.4:
+    Adiciona correções importantes no funcionamento do jogo
+    - Verificação de vitoria e localização das figuras e associassão do vencedor
+
+O que necessita de mudança?
+    - Após jogar a primeira partida é preciso fechar e abrir o jogo novamente para resetar as variáveis 
+    - Implementar uma saida de jogar novamente
+    - Regular os valores dentro das figuras 
+    - Adicionar em algum lugar(acho que acima) as figuras que podem e já foram utilizadas
+    - Implementar dentro do tabuleiro valores dos campos de 1 a 9 com cor de baixa luminosidade para facilitar jogabilidade
+    - As cores devem permanecer essas ou mudar?
+    - 
