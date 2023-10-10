@@ -1654,7 +1654,7 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else {
-                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida, tente outra força");
+                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
                             
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_oito) {
@@ -1694,7 +1694,7 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else {
-                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida, tente outra força");
+                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
                             
                         } else {
@@ -1743,7 +1743,7 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else {
-                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida, tente outra força");
+                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
                             
                         } else if (contador % 2 == 1 && valor_forca > valor_forca_espaco_nove) {
@@ -1783,7 +1783,7 @@ int main() {
                                 limpa_opcao_invalida();
                                 
                             } else {
-                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 10, 500, 0, "opção invalida, tente outra força");
+                                al_draw_text(fonte_inicio_menu_inferior, cor_texto, 275, 810, 0, "opção invalida, tente outra força");
                             }
                             
                         } else {

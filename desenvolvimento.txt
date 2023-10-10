@@ -87,6 +87,7 @@ versão 3.4:
     - Verificação de vitoria e localização das figuras e associassão do vencedor
 
 O que necessita de mudança?
+    - Tem uma função com o opção inválida no lugar incorreto
     - Após jogar a primeira partida é preciso fechar e abrir o jogo novamente para resetar as variáveis 
     - Implementar uma saida de jogar novamente
     - Regular os valores dentro das figuras 
@@ -95,4 +96,4 @@ O que necessita de mudança?
     - As cores devem permanecer essas ou mudar?
     - A música continua essa? parece ser enjoativa
     - A fonte deve ser mudada ou continua retrô?
-    
+
