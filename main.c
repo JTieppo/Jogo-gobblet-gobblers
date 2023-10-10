@@ -799,7 +799,7 @@ int main() {
         al_draw_text(fonte_inicio, cor_texto, 70, 150, 0, "Desenvolvedores");
         al_draw_text(fonte_creditos_instrucoes, cor_texto, 150, 320, 0, "- Emerson Alexandre Tieppo Junior");
         al_draw_text(fonte_creditos_instrucoes, cor_texto, 150, 400, 0, "- Lucas Hiroshi Okamoto Catuyama");       
-        al_draw_text(fonte_creditos_instrucoes, cor_texto, 150, 480, 0, "- Misael Correia");
+        al_draw_text(fonte_creditos_instrucoes, cor_texto, 150, 480, 0, "- Misael Castro Correia");
         al_draw_text(fonte_creditos_instrucoes, cor_texto, 20, 670, 0, "Discentes de graduação no curso de bacharel");
         al_draw_text(fonte_creditos_instrucoes, cor_texto, 40, 700, 0, "em engenharia de software do 1° semestre.");
         al_draw_text(fonte_inicio_menu_inferior, cor_texto, 350, 800, 0, "esc - voltar");
