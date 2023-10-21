@@ -1,58 +1,61 @@
-#include <stdio.h>
-#include <locale.h>
-#include <string.h>
-#include <stdbool.h>
+#include <stdio.h>    // importa biblioteca padrão do C para utilização de funções principais
+#include <locale.h>   // importa biblioteca para utilizar caracteres em português
+#include <string.h>   // importa biblioteca de tratamento de strings
+#include <stdbool.h>  // importa biblioteca boleana para verdadeiro e falso 
 
-#include <allegro5/allegro.h>
-#include <allegro5/allegro_primitives.h>
-#include <allegro5/allegro_ttf.h>
-#include <allegro5/allegro_audio.h>
-#include <allegro5/allegro_acodec.h>
+#include <allegro5/allegro.h>             // importa biblioteca padrão e geral do allegro5
+#include <allegro5/allegro_primitives.h>  // importa biblioteca primitives para desenhar formas na tela
+#include <allegro5/allegro_ttf.h>         // importa biblioteca para tratamento de desenho de texto
+#include <allegro5/allegro_audio.h>       // importa biblioteca para tratamento de audio 
+#include <allegro5/allegro_acodec.h>      // importa biblioteca para tratamento de mídia audio 
 
-int main() {
+int main() { 
     setlocale(LC_ALL, "Portuguese");
 
     // PONTOS DE DESTAQUE
+    // Todo o código foi criado dentro da main por ser ela quem inicia a interface e as bibliotecas, por isso os voids pertencem a ela
     // Criei o código pensando na organização que facilite a manutenção, por isso tem seções de código
     // geralmente a seção é identificada pelos comentarios acima e as funções de cada linha ao lado direito
     // os printf utilizei para pontos que podem ser melhorados pois aparecem só no terminal, mas fiquem a
     // vontade pra implementar novas ideias
-
     // Utilizei o allegro5 como biblioteca GUI
 
-    // Inicia e armazena as bibliotecas do allegro5
+
+    // Inicia e armazena as bibliotecas do allegro5 com a chamada das funções das mesmas
     al_init();                  // inicia a biblioteca padrao do allegro
     al_init_primitives_addon(); // contem draw circle e rectangle
     al_init_ttf_addon();        // contem load do ttf pras fontes
-    al_init_font_addon();       // contm a biblioteca de escrita pra fonte
-    al_install_audio();
-    al_init_acodec_addon();
-    al_reserve_samples(1);
+    al_init_font_addon();       // contem a biblioteca de escrita pra fonte
+    al_install_audio();         // contem a biblioteca de load audio
+    al_init_acodec_addon();     // contem a biblioteca de tratamento de audio e midia
+    al_reserve_samples(1);      // reserva memória para midia audio
 
     // cria ponteiro para uma janela e eventos(display)
-    ALLEGRO_DISPLAY *display = NULL;
-    ALLEGRO_SAMPLE *sample = NULL;
-    ALLEGRO_EVENT_QUEUE *event_queue = NULL;
-    ALLEGRO_EVENT ev;
+    ALLEGRO_DISPLAY *display = NULL;          // cria uma instancia de display onde sera carregadas informações
+    ALLEGRO_SAMPLE *sample = NULL;            // cria ponteiro para a memória de armazenamento de audio
+    ALLEGRO_EVENT_QUEUE *event_queue = NULL;  // cria ponteiro pra esperar da instancia display um evento(ação) de tecla 
+    ALLEGRO_EVENT ev;                         // não lembro mas é necessário haha depois eu descubro
 
-    // verificadores, caso negativo o programa é encerrado pra evitar problemas
+    // verificadores, caso negativo o programa é encerrado pra evitar problemas de hardware e memória
     printf("\nadicionar verificadores de inicio das fontes e desenhos\n");
-    if (!al_init()) {
-        fprintf(stderr, "Falha ao inicializar o Allegro.\n");
+    if (!al_init()) {                                                   // Caso a biblioteca principal do allegro não seja iniciada
+        fprintf(stderr, "Falha ao inicializar o Allegro.\n");           // corretamente o software encerra
         return -1;
     }
 
-    display = al_create_display(850, 850);
-    if (!display) {
-        fprintf(stderr, "Falha ao criar a janela.\n");
+    display = al_create_display(850, 850);  // Chama a instancia criada para a janela e carrega a informação de seu tamanho
+
+
+    if (!display) {                                                     // Caso o display não seja iniciado corretamente 
+        fprintf(stderr, "Falha ao criar a janela.\n");                  // fecha o software
         return -1;
     }
 
     // Define as cores dos objetos
-    ALLEGRO_COLOR cor_teste = al_map_rgb(255, 51, 153);
-    ALLEGRO_COLOR cor_background = al_map_rgb(1, 46, 64);
-    ALLEGRO_COLOR cor_background_teste = al_map_rgb(100, 46, 200);
-    ALLEGRO_COLOR cor_linha = al_map_rgb(242, 227, 213);
+    ALLEGRO_COLOR cor_teste = al_map_rgb(255, 51, 153);                 // aqui eu chamo uma função do allegro5 "ALLEGRO_COLOR" e defino uma variável para 
+    ALLEGRO_COLOR cor_background = al_map_rgb(1, 46, 64);               // armazenar o valor criado pela biblioteca, que nesse caso é um RGB, o "al_map_rgb"
+    ALLEGRO_COLOR cor_background_teste = al_map_rgb(100, 46, 200);      // é uma função que retornará um valor que gera uma cor sendo o primeiro R(red),
+    ALLEGRO_COLOR cor_linha = al_map_rgb(242, 227, 213);                // G(green) e B(blue), quanto maior o valor mais da cor terá na cor final
     ALLEGRO_COLOR cor_circulo = al_map_rgb(140, 31, 40);
     ALLEGRO_COLOR cor_retangulo = al_map_rgb(0, 0, 0);
     ALLEGRO_COLOR cor_texto = al_map_rgb(10, 200, 10);
@@ -62,17 +65,19 @@ int main() {
     // coloquei uma variavel diferente pros numeros pra se caso queira mudar a cor
 
     // Importa e carrega o arquivo da fonte
-    ALLEGRO_FONT *fonte = al_load_font("./assets/Pixelify.ttf", 65, 0);
-    ALLEGRO_FONT *fonte_inicio = al_load_font("./assets/Pixelify.ttf", 85, 0);
-    ALLEGRO_FONT *fonte_creditos_instrucoes = al_load_font("./assets/Pixelify.ttf", 35, 0);
-    ALLEGRO_FONT *fonte_inicio_menu_inferior = al_load_font("./assets/Pixelify.ttf", 20, 0);
+    ALLEGRO_FONT *fonte = al_load_font("./assets/Pixelify.ttf", 65, 0);                            // chama a função de armazenamento e criação de ponteiro para
+    ALLEGRO_FONT *fonte_inicio = al_load_font("./assets/Pixelify.ttf", 85, 0);                     // uma fonte, armazena em uma variável e chama a função de 
+    ALLEGRO_FONT *fonte_creditos_instrucoes = al_load_font("./assets/Pixelify.ttf", 35, 0);        // carregamento "al_load_font", passa como parâmetro uma pasta
+    ALLEGRO_FONT *fonte_inicio_menu_inferior = al_load_font("./assets/Pixelify.ttf", 20, 0);       // do jogo, a assets que criei para armazenar arquivos de imagem
+                                                                                                   // sons, fontes e afins, da o caminho da fonte, o tamanho desejado
+                                                                                                   // e a flag 0 que até o momento não entendi bem pra que serve
 
     // Implementos de audio
-    sample = al_load_sample("assets/Reprise - Class Act - ANBR Adrian Berenguer.ogg");
+    sample = al_load_sample("assets/Reprise - Class Act - ANBR Adrian Berenguer.ogg");             // segue a mesma lógica dos anteriores mas pro áudio 
     al_play_sample(sample, 1.0, 0.0,1.0,ALLEGRO_PLAYMODE_LOOP, NULL);
 
-    // Define caracteristicas
-    int espessura_sharp = 5;
+    // Define caracteristicas dos objetos do jogo
+    int espessura_sharp = 5;            // o sharp é #
     int espessura_circulo = 4;
     int espessura_retangulo = 4;
     int valor_forca = 1;
@@ -114,12 +119,13 @@ int main() {
     al_clear_to_color(cor_background);
 
 
-    // Cria evento de leitura
+    // Cria evento de leitura de tecla
     event_queue = al_create_event_queue();
 
     al_install_keyboard();
     al_register_event_source(event_queue, al_get_keyboard_event_source());
 
+    // 
     void entrada() {
         al_flip_display();
         al_draw_text(fonte_inicio, cor_texto, 10, 10, 0, " ");
@@ -188,7 +194,7 @@ int main() {
         al_draw_text(fonte_inicio_menu_inferior, cor_texto, 380, 750, 0, "esc -  Sair");
         al_flip_display();
     }
-    entrada();
+    entrada();   // Chama a função void acima para carregar na tela de jogo as primeiras informações  
 
     // Desenha o tabuleiro
     void sharp() {
@@ -210,13 +216,13 @@ int main() {
         al_flip_display();
     }
 
-    // DESENHA OS CIRCULOS
+    // DESENHA OS CIRCULOS QUANDO CHAMADOS
     // superior esquerdo
-    void circ_sup_esq(valor_forca) {
-        switch (valor_forca) {
-            case 1:
-                al_draw_circle(200, 250, 30, cor_circulo, espessura_circulo);
-                al_draw_text(fonte, cor_circulo, 185, 210, 0, "1");
+    void circ_sup_esq(valor_forca) {                                                 // quando o desenho for chamado ele irá receber um valor como
+        switch (valor_forca) {                                                       // parâmetro que será utilizado para selecionar o switch que 
+            case 1:                                                                  // corresponde a força chamada
+                al_draw_circle(200, 250, 30, cor_circulo, espessura_circulo);        // Chama o desenhador do allegro5, passa a localização no plano
+                al_draw_text(fonte, cor_circulo, 185, 210, 0, "1");                  // cartesiano, passa as caracteristicas e atualiza a tela no final   
                 al_flip_display();    
                 break;
 
@@ -701,12 +707,12 @@ int main() {
     // FIM RETANGULOS
 
 
-    void limpa_opcao_invalida() {
-        al_draw_filled_rectangle(275, 810, 650, 840, cor_background);
+    void limpa_opcao_invalida() {                                        // quando selecionada uma opção incorreta aparece na tela que a opção 
+        al_draw_filled_rectangle(275, 810, 650, 840, cor_background);    // é inválida, isso limpa a escrita posteriormente para não atrapalhar
+    }                                                                    // o restante do jogo 
+    
 
-    }
-
-    // Limpa os lugares para serem substituidos    
+    // Limpa os lugares para serem substituidos por novas figuras    
     void limpa(lugar_limpeza) {
         switch (lugar_limpeza) {
             case 1: //limpa_superior_esquerdo
