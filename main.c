@@ -73,8 +73,8 @@ int main() {
                                                                                                    // e a flag 0 que até o momento não entendi bem pra que serve
 
     // Implementos de audio
-    sample = al_load_sample("assets/Reprise - Class Act - ANBR Adrian Berenguer.ogg");             // segue a mesma lógica dos anteriores mas pro áudio 
-    al_play_sample(sample, 1.0, 0.0,1.0,ALLEGRO_PLAYMODE_LOOP, NULL);
+    //sample = al_load_sample("assets/Reprise - Class Act - ANBR Adrian Berenguer.ogg");             // segue a mesma lógica dos anteriores mas pro áudio 
+    //al_play_sample(sample, 1.0, 0.0,1.0,ALLEGRO_PLAYMODE_LOOP, NULL);
 
     // Define caracteristicas dos objetos do jogo
     int espessura_sharp = 5;            // o sharp é #
